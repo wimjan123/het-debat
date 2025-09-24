@@ -72,15 +72,19 @@
 ## Phase 3.5: Polish
 - [ ] T019 [P] Unit tests for validation in tests/unit/test_validation.py
 - [ ] T020 Performance tests (<200ms)
-- [ ] T021 [P] Update docs/api.md
-- [ ] T022 Remove duplication
-- [ ] T023 Run manual-testing.md
+- [ ] T021 [P] Mathematical accuracy tests for political algorithms
+- [ ] T022 [P] Accessibility tests (WCAG 2.1 AA compliance)
+- [ ] T023 [P] Localization tests (NL/EN content completeness)
+- [ ] T024 [P] Save file compatibility tests
+- [ ] T025 [P] Update docs/api.md
+- [ ] T026 Remove duplication
+- [ ] T027 Run manual-testing.md
 
 ## Dependencies
 - Tests (T004-T007) before implementation (T008-T014)
 - T008 blocks T009, T015
 - T016 blocks T018
-- Implementation before polish (T019-T023)
+- Implementation before polish (T019-T027)
 
 ## Parallel Example
 ```

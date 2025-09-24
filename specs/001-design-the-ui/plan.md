@@ -1,8 +1,8 @@
 
-# Implementation Plan: [FEATURE]
+# Implementation Plan: Dutch Politics Simulation Game UI
 
-**Branch**: `[###-feature-name]` | **Date**: [DATE] | **Spec**: [link]
-**Input**: Feature specification from `/specs/[###-feature-name]/spec.md`
+**Branch**: `001-design-the-ui` | **Date**: 2025-09-24 | **Spec**: [spec.md](./spec.md)
+**Input**: Feature specification from `/specs/001-design-the-ui/spec.md`
 
 ## Execution Flow (/plan command scope)
 ```
@@ -31,18 +31,18 @@
 - Phase 3-4: Implementation execution (manual or via tools)
 
 ## Summary
-[Extract from feature spec: primary requirement + technical approach from research]
+Create comprehensive UI for Dutch politics simulation game with 10 specialized screens (Dashboard, Map, Media, Debates, Coalition, Parliament, Social, Results, Settings). Focus on explainable simulation with immediate visual feedback, accessibility compliance (WCAG 2.1 AA, NL/EN localization), and educational integrity. Technical approach: Godot 4 with modular architecture splitting UI scenes, presentation layer, core API interfaces, and stub data providers.
 
 ## Technical Context
-**Language/Version**: [e.g., Python 3.11, Swift 5.9, Rust 1.75 or NEEDS CLARIFICATION]  
-**Primary Dependencies**: [e.g., FastAPI, UIKit, LLVM or NEEDS CLARIFICATION]  
-**Storage**: [if applicable, e.g., PostgreSQL, CoreData, files or N/A]  
-**Testing**: [e.g., pytest, XCTest, cargo test or NEEDS CLARIFICATION]  
-**Target Platform**: [e.g., Linux server, iOS 15+, WASM or NEEDS CLARIFICATION]
-**Project Type**: [single/web/mobile - determines source structure]  
-**Performance Goals**: [domain-specific, e.g., 1000 req/s, 10k lines/sec, 60 fps or NEEDS CLARIFICATION]  
-**Constraints**: [domain-specific, e.g., <200ms p95, <100MB memory, offline-capable or NEEDS CLARIFICATION]  
-**Scale/Scope**: [domain-specific, e.g., 10k users, 1M LOC, 50 screens or NEEDS CLARIFICATION]
+**Language/Version**: GDScript in Godot 4.x (2D, Control-based UI)
+**Primary Dependencies**: Godot Engine 4.x, JSON data packs for political content
+**Storage**: Local JSON files for save data, configuration, and political data packs
+**Testing**: Godot Unit Tests (GUT) for logic, manual testing for UI/accessibility
+**Target Platform**: Desktop (Windows, macOS, Linux) with 13-15" screen optimization
+**Project Type**: Single project with modular architecture
+**Performance Goals**: 60 FPS UI, <500ms screen transitions, <200ms tooltip response
+**Constraints**: <200MB RAM baseline, offline-capable, WCAG 2.1 AA compliance, NL/EN support
+**Scale/Scope**: 10 main screens, 15+ reusable UI components, JSON-driven content system
 
 ## Constitution Check
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
@@ -70,42 +70,59 @@ specs/[###-feature]/
 
 ### Source Code (repository root)
 ```
-# Option 1: Single project (DEFAULT)
-src/
-├── models/
-├── services/
-├── cli/
-└── lib/
+# Godot 4 Project Structure
+project.godot                 # Godot project configuration
+ui/                          # UI scenes and theme resources
+├── scenes/                  # .tscn scene files
+│   ├── dashboard/
+│   ├── map/
+│   ├── media/
+│   ├── debates/
+│   ├── coalition/
+│   ├── parliament/
+│   └── shared/              # Reusable UI components
+├── theme/                   # Theme resources and styles
+│   ├── default.tres         # Main theme file
+│   ├── fonts/
+│   └── icons/
+└── layouts/                 # Layout configuration files
+
+presentation/                # View-model layer (GDScript)
+├── dashboard_vm.gd
+├── map_vm.gd
+├── media_vm.gd
+└── shared/                  # Shared presentation logic
+
+core_api/                    # Interface definitions only
+├── simulation_api.gd        # Main SimulationAPI interface
+├── polling_api.gd
+├── coalition_api.gd
+└── data_models.gd           # Data structure definitions
+
+stubs/                       # Fake data providers for UI testing
+├── simulation_stub.gd       # Implements SimulationAPI
+├── polling_stub.gd
+└── data/                    # JSON test data files
+
+data/                        # External data packs
+├── parties/                 # Political party definitions
+├── scenarios/               # Election scenarios
+├── localization/           # NL/EN translations
+│   ├── strings_nl.json
+│   └── strings_en.json
+└── themes/                 # Accessibility themes
 
 tests/
-├── contract/
-├── integration/
-└── unit/
+├── unit/                   # GUT unit tests
+├── integration/            # UI integration tests
+└── accessibility/          # WCAG compliance tests
 
-# Option 2: Web application (when "frontend" + "backend" detected)
-backend/
-├── src/
-│   ├── models/
-│   ├── services/
-│   └── api/
-└── tests/
-
-frontend/
-├── src/
-│   ├── components/
-│   ├── pages/
-│   └── services/
-└── tests/
-
-# Option 3: Mobile + API (when "iOS/Android" detected)
-api/
-└── [same as backend above]
-
-ios/ or android/
-└── [platform-specific structure]
+input/                      # Input mapping configurations
+├── default_keymap.tres
+└── accessibility_keymap.tres
 ```
 
-**Structure Decision**: [DEFAULT to Option 1 unless Technical Context indicates web/mobile app]
+**Structure Decision**: Godot 4 modular architecture with separation of UI, presentation, interfaces, and data
 
 ## Phase 0: Outline & Research
 1. **Extract unknowns from Technical Context** above:
@@ -166,18 +183,34 @@ ios/ or android/
 
 **Task Generation Strategy**:
 - Load `.specify/templates/tasks-template.md` as base
-- Generate tasks from Phase 1 design docs (contracts, data model, quickstart)
-- Each contract → contract test task [P]
-- Each entity → model creation task [P] 
-- Each user story → integration test task
-- Implementation tasks to make tests pass
+- Generate tasks from Phase 1 design docs (SimulationAPI interfaces, UI data models, quickstart validation)
+- Each UI screen → scene creation task [P] + view model task [P] + accessibility test task [P]
+- Each data model → GDScript class task [P] + validation test task [P]
+- SimulationAPI interface → stub implementation task + integration test task
+- Theme system → resource creation task [P] + accessibility compliance test [P]
+- Localization → translation file tasks [P] + language switching test
+- Each functional requirement → UI implementation task + manual validation task
 
-**Ordering Strategy**:
-- TDD order: Tests before implementation 
-- Dependency order: Models before services before UI
-- Mark [P] for parallel execution (independent files)
+**Godot-Specific Ordering Strategy**:
+- Setup: Project structure, theme resources, input mapping
+- Core Infrastructure: Data models, API interfaces, stub implementations
+- UI Foundation: Shared components, navigation system, theme system
+- Screen Implementation: Individual scene files with view models (parallel execution)
+- Integration: API binding, event handling, state management
+- Validation: Accessibility tests, performance tests, constitutional compliance tests
 
-**Estimated Output**: 25-30 numbered, ordered tasks in tasks.md
+**Parallel Execution Opportunities**:
+- All scene files can be developed in parallel ([P] tasks)
+- Theme resources independent of scene development
+- Translation files can be created simultaneously
+- Individual screen view models are independent
+- Accessibility tests per screen can run in parallel
+
+**Estimated Output**: 35-40 numbered, ordered tasks in tasks.md
+- 10 setup/infrastructure tasks (sequential dependencies)
+- 20 screen/component implementation tasks (mostly parallel)
+- 8 validation/testing tasks (some parallel, some dependent)
+- 5 integration and polish tasks (sequential at end)
 
 **IMPORTANT**: This phase is executed by the /tasks command, NOT by /plan
 
@@ -201,18 +234,18 @@ ios/ or android/
 *This checklist is updated during execution flow*
 
 **Phase Status**:
-- [ ] Phase 0: Research complete (/plan command)
-- [ ] Phase 1: Design complete (/plan command)
-- [ ] Phase 2: Task planning complete (/plan command - describe approach only)
-- [ ] Phase 3: Tasks generated (/tasks command)
+- [x] Phase 0: Research complete (/plan command)
+- [x] Phase 1: Design complete (/plan command)
+- [x] Phase 2: Task planning complete (/plan command - describe approach only)
+- [x] Phase 3: Tasks generated (/tasks command)
 - [ ] Phase 4: Implementation complete
 - [ ] Phase 5: Validation passed
 
 **Gate Status**:
-- [ ] Initial Constitution Check: PASS
-- [ ] Post-Design Constitution Check: PASS
-- [ ] All NEEDS CLARIFICATION resolved
-- [ ] Complexity deviations documented
+- [x] Initial Constitution Check: PASS
+- [x] Post-Design Constitution Check: PASS
+- [x] All NEEDS CLARIFICATION resolved
+- [x] Complexity deviations documented
 
 ---
 *Based on Constitution v1.0.0 - See `/memory/constitution.md`*

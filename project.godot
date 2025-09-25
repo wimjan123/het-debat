@@ -32,7 +32,6 @@ window/stretch/aspect="expand"
 [gui]
 
 theme/custom="res://ui/theme/default.tres"
-theme/custom_font="res://ui/theme/fonts/default.ttf"
 
 [input]
 
@@ -81,8 +80,8 @@ redo_action={
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://data/localization/strings_nl.po", "res://data/localization/strings_en.po")
-locale/translations_pot_files=PackedStringArray("res://data/localization/strings.pot")
+locale/translations=PackedStringArray()
+locale/translations_pot_files=PackedStringArray()
 
 [layer_names]
 

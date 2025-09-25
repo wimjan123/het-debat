@@ -71,7 +71,7 @@ func _ready():
 	_initialize_default_state()
 
 	# Start session timer
-	session_start_time = Time.get_time_dict_from_system()["unix"]
+	session_start_time = Time.get_unix_time_from_system()
 
 func _process(delta):
 	"""Handle auto-save and session tracking"""

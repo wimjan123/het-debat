@@ -36,9 +36,10 @@ func _ready():
 	detect_system_language()
 	await load_all_translations()
 
-	# Connect to settings changes
-	if SettingsManager:
-		SettingsManager.setting_changed.connect(_on_setting_changed)
+	# Connect to settings changes (will be available later)
+	var settings_manager = get_node_or_null("/root/SettingsManager")
+	if settings_manager:
+		settings_manager.setting_changed.connect(_on_setting_changed)
 
 func detect_system_language():
 	"""Detect system language and set appropriate default"""
@@ -258,7 +259,7 @@ func get_nested_value(data: Dictionary, key_parts: Array[String]) -> String:
 
 	return ""
 
-func tr(key: String, default_text: String = "") -> String:
+func translate(key: String, default_text: String = "") -> String:
 	"""Short alias for get_text"""
 	return get_text(key, default_text)
 

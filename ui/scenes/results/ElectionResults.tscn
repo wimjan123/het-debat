@@ -1,0 +1,149 @@
+[gd_scene load_steps=4 format=3 uid="uid://hw9x3z1e4i1e"]
+
+[ext_resource type="Script" path="res://ui/scenes/results/election_results.gd" id="1_ew9x3"]
+[ext_resource type="Theme" path="res://ui/theme/default.tres" id="2_fw9x4"]
+[ext_resource type="PackedScene" uid="uid://fm2q6tv2btvq2" path="res://ui/scenes/shared/NavigationBar.tscn" id="3_gw9x5"]
+
+[node name="ElectionResults" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_fw9x4")
+script = ExtResource("1_ew9x3")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NavigationBar" parent="VBoxContainer" instance=ExtResource("3_gw9x5")]
+layout_mode = 2
+
+[node name="ResultsContent" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ResultsHeader" type="VBoxContainer" parent="VBoxContainer/ResultsContent"]
+layout_mode = 2
+
+[node name="ElectionTitle" type="Label" parent="VBoxContainer/ResultsContent/ResultsHeader"]
+layout_mode = 2
+text = "Dutch General Election Results 2024"
+theme_type_variation = &"HeaderLarge"
+horizontal_alignment = 1
+
+[node name="ResultsStatus" type="Label" parent="VBoxContainer/ResultsContent/ResultsHeader"]
+layout_mode = 2
+text = "Final Results • Turnout: 82.1%"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/ResultsContent/ResultsHeader"]
+layout_mode = 2
+
+[node name="ResultsMain" type="HSplitContainer" parent="VBoxContainer/ResultsContent"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="LeftPanel" type="VBoxContainer" parent="VBoxContainer/ResultsContent/ResultsMain"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PartyResults" type="VBoxContainer" parent="VBoxContainer/ResultsContent/ResultsMain/LeftPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PartyResultsTitle" type="Label" parent="VBoxContainer/ResultsContent/ResultsMain/LeftPanel/PartyResults"]
+layout_mode = 2
+text = "Seat Allocation"
+theme_type_variation = &"HeaderMedium"
+
+[node name="ResultsList" type="ScrollContainer" parent="VBoxContainer/ResultsContent/ResultsMain/LeftPanel/PartyResults"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ResultsContainer" type="VBoxContainer" parent="VBoxContainer/ResultsContent/ResultsMain/LeftPanel/PartyResults/ResultsList"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CoalitionForming" type="VBoxContainer" parent="VBoxContainer/ResultsContent/ResultsMain/LeftPanel"]
+layout_mode = 2
+
+[node name="CoalitionTitle" type="Label" parent="VBoxContainer/ResultsContent/ResultsMain/LeftPanel/CoalitionForming"]
+layout_mode = 2
+text = "Coalition Formation"
+theme_type_variation = &"HeaderSmall"
+
+[node name="CoalitionStatus" type="Label" parent="VBoxContainer/ResultsContent/ResultsMain/LeftPanel/CoalitionForming"]
+layout_mode = 2
+text = "Negotiations in progress..."
+
+[node name="RightPanel" type="VBoxContainer" parent="VBoxContainer/ResultsContent/ResultsMain"]
+layout_mode = 2
+custom_minimum_size = Vector2(400, 0)
+
+[node name="ElectionAnalysis" type="VBoxContainer" parent="VBoxContainer/ResultsContent/ResultsMain/RightPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="AnalysisTitle" type="Label" parent="VBoxContainer/ResultsContent/ResultsMain/RightPanel/ElectionAnalysis"]
+layout_mode = 2
+text = "Election Analysis"
+theme_type_variation = &"HeaderMedium"
+
+[node name="AnalysisTabs" type="TabContainer" parent="VBoxContainer/ResultsContent/ResultsMain/RightPanel/ElectionAnalysis"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Overview" type="ScrollContainer" parent="VBoxContainer/ResultsContent/ResultsMain/RightPanel/ElectionAnalysis/AnalysisTabs"]
+layout_mode = 2
+
+[node name="OverviewContent" type="VBoxContainer" parent="VBoxContainer/ResultsContent/ResultsMain/RightPanel/ElectionAnalysis/AnalysisTabs/Overview"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Regional" type="ScrollContainer" parent="VBoxContainer/ResultsContent/ResultsMain/RightPanel/ElectionAnalysis/AnalysisTabs"]
+layout_mode = 2
+
+[node name="RegionalContent" type="VBoxContainer" parent="VBoxContainer/ResultsContent/ResultsMain/RightPanel/ElectionAnalysis/AnalysisTabs/Regional"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Historical" type="ScrollContainer" parent="VBoxContainer/ResultsContent/ResultsMain/RightPanel/ElectionAnalysis/AnalysisTabs"]
+layout_mode = 2
+
+[node name="HistoricalContent" type="VBoxContainer" parent="VBoxContainer/ResultsContent/ResultsMain/RightPanel/ElectionAnalysis/AnalysisTabs/Historical"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ResultsActions" type="VBoxContainer" parent="VBoxContainer/ResultsContent/ResultsMain/RightPanel"]
+layout_mode = 2
+
+[node name="ActionsTitle" type="Label" parent="VBoxContainer/ResultsContent/ResultsMain/RightPanel/ResultsActions"]
+layout_mode = 2
+text = "Post-Election Actions"
+theme_type_variation = &"HeaderSmall"
+
+[node name="ActionButtons" type="VBoxContainer" parent="VBoxContainer/ResultsContent/ResultsMain/RightPanel/ResultsActions"]
+layout_mode = 2
+
+[node name="NewCampaignButton" type="Button" parent="VBoxContainer/ResultsContent/ResultsMain/RightPanel/ResultsActions/ActionButtons"]
+layout_mode = 2
+text = "Start New Campaign"
+
+[node name="AnalyzeResultsButton" type="Button" parent="VBoxContainer/ResultsContent/ResultsMain/RightPanel/ResultsActions/ActionButtons"]
+layout_mode = 2
+text = "Detailed Analysis"
+
+[node name="ExportDataButton" type="Button" parent="VBoxContainer/ResultsContent/ResultsMain/RightPanel/ResultsActions/ActionButtons"]
+layout_mode = 2
+text = "Export Results"
+
+[connection signal="pressed" from="VBoxContainer/ResultsContent/ResultsMain/RightPanel/ResultsActions/ActionButtons/NewCampaignButton" to="." method="_on_new_campaign_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ResultsContent/ResultsMain/RightPanel/ResultsActions/ActionButtons/AnalyzeResultsButton" to="." method="_on_analyze_results_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ResultsContent/ResultsMain/RightPanel/ResultsActions/ActionButtons/ExportDataButton" to="." method="_on_export_data_button_pressed"]

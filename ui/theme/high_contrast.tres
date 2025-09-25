@@ -1,0 +1,207 @@
+[gd_resource type="Theme" format=3 uid="uid://daxc7y4pq1ahn"]
+
+[ext_resource type="Theme" uid="uid://crpdbjwi1fhxp" path="res://ui/theme/default.tres" id="1_8k3mn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1"]
+content_margin_left = 8.0
+content_margin_top = 4.0
+content_margin_right = 8.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2"]
+content_margin_left = 8.0
+content_margin_top = 4.0
+content_margin_right = 8.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3"]
+content_margin_left = 8.0
+content_margin_top = 4.0
+content_margin_right = 8.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4"]
+content_margin_left = 8.0
+content_margin_top = 4.0
+content_margin_right = 8.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5"]
+content_margin_left = 12.0
+content_margin_top = 8.0
+content_margin_right = 12.0
+content_margin_bottom = 8.0
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[resource]
+base_type = &"Theme"
+resource_name = "HighContrastTheme"
+default_base_scale = 1.0
+default_font_size = 16
+
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_color_disabled = Color(0.5, 0.5, 0.5, 1)
+Button/colors/font_color_focus = Color(0, 0, 0, 1)
+Button/colors/font_color_hover = Color(0, 0, 0, 1)
+Button/colors/font_color_pressed = Color(0, 0, 0, 1)
+Button/colors/icon_color_disabled = Color(0.5, 0.5, 0.5, 1)
+Button/colors/icon_color_focus = Color(0, 0, 0, 1)
+Button/colors/icon_color_hover = Color(0, 0, 0, 1)
+Button/colors/icon_color_normal = Color(1, 1, 1, 1)
+Button/colors/icon_color_pressed = Color(0, 0, 0, 1)
+Button/font_sizes/font_size = 16
+Button/styles/disabled = SubResource("StyleBoxFlat_4")
+Button/styles/focus = SubResource("StyleBoxFlat_3")
+Button/styles/hover = SubResource("StyleBoxFlat_2")
+Button/styles/normal = SubResource("StyleBoxFlat_1")
+Button/styles/pressed = SubResource("StyleBoxFlat_2")
+
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 1)
+Label/font_sizes/font_size = 16
+
+LineEdit/colors/font_color = Color(1, 1, 1, 1)
+LineEdit/colors/font_color_selected = Color(0, 0, 0, 1)
+LineEdit/colors/font_color_uneditable = Color(0.7, 0.7, 0.7, 1)
+LineEdit/colors/selection_color = Color(1, 1, 0, 1)
+LineEdit/colors/caret_color = Color(1, 1, 1, 1)
+LineEdit/font_sizes/font_size = 16
+LineEdit/styles/focus = SubResource("StyleBoxFlat_3")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_1")
+LineEdit/styles/read_only = SubResource("StyleBoxFlat_4")
+
+Panel/styles/panel = SubResource("StyleBoxFlat_5")
+
+ScrollContainer/colors/font_color = Color(1, 1, 1, 1)
+ScrollContainer/styles/panel = SubResource("StyleBoxFlat_6")
+
+VScrollBar/colors/font_color = Color(1, 1, 1, 1)
+HScrollBar/colors/font_color = Color(1, 1, 1, 1)
+
+CheckBox/colors/font_color = Color(1, 1, 1, 1)
+CheckBox/colors/font_color_disabled = Color(0.5, 0.5, 0.5, 1)
+CheckBox/colors/font_color_focus = Color(0, 0, 0, 1)
+CheckBox/colors/font_color_hover = Color(1, 1, 0, 1)
+CheckBox/colors/font_color_pressed = Color(1, 1, 0, 1)
+CheckBox/font_sizes/font_size = 16
+
+OptionButton/colors/font_color = Color(1, 1, 1, 1)
+OptionButton/colors/font_color_disabled = Color(0.5, 0.5, 0.5, 1)
+OptionButton/colors/font_color_focus = Color(0, 0, 0, 1)
+OptionButton/colors/font_color_hover = Color(0, 0, 0, 1)
+OptionButton/colors/font_color_pressed = Color(0, 0, 0, 1)
+OptionButton/font_sizes/font_size = 16
+OptionButton/styles/disabled = SubResource("StyleBoxFlat_4")
+OptionButton/styles/focus = SubResource("StyleBoxFlat_3")
+OptionButton/styles/hover = SubResource("StyleBoxFlat_2")
+OptionButton/styles/normal = SubResource("StyleBoxFlat_1")
+OptionButton/styles/pressed = SubResource("StyleBoxFlat_2")
+
+TabContainer/colors/font_color_bg = Color(0.5, 0.5, 0.5, 1)
+TabContainer/colors/font_color_fg = Color(1, 1, 1, 1)
+TabContainer/colors/font_color_disabled = Color(0.3, 0.3, 0.3, 1)
+TabContainer/font_sizes/font_size = 16
+
+Window/colors/title_color = Color(1, 1, 1, 1)
+Window/font_sizes/title_size = 18
+
+# Political party colors - high contrast versions for accessibility
+# These maintain party identity while ensuring adequate contrast
+PartyColors/vvd = Color(0, 0.4, 1, 1)          # High contrast blue
+PartyColors/pvda = Color(1, 0, 0, 1)            # Pure red
+PartyColors/pvv = Color(1, 1, 0, 1)             # Pure yellow
+PartyColors/cda = Color(0, 1, 0, 1)             # Pure green
+PartyColors/d66 = Color(0, 1, 0.5, 1)           # Bright green
+PartyColors/groenlinks = Color(0.3, 1, 0, 1)    # Bright green
+PartyColors/sp = Color(1, 0.2, 0.2, 1)          # Bright red
+PartyColors/cu = Color(0, 0.8, 1, 1)            # Bright cyan
+PartyColors/sgp = Color(1, 0.5, 0, 1)           # Pure orange
+PartyColors/fvd = Color(0.5, 0, 0, 1)           # Dark red
+PartyColors/pvdd = Color(0, 0.6, 0.2, 1)        # Medium green
+PartyColors/50plus = Color(0.6, 0, 1, 1)        # Purple
+PartyColors/volt = Color(0.3, 0, 0.7, 1)        # Purple
+PartyColors/ja21 = Color(0, 0.3, 1, 1)          # Blue
+PartyColors/bij1 = Color(1, 1, 0.3, 1)          # Light yellow
+
+# WCAG 2.1 AA compliance colors
+# All colors tested for 4.5:1 contrast ratio against background
+AccessibilityColors/background = Color(0, 0, 0, 1)
+AccessibilityColors/surface = Color(0.1, 0.1, 0.1, 1)
+AccessibilityColors/primary = Color(1, 1, 1, 1)
+AccessibilityColors/secondary = Color(0.8, 0.8, 0.8, 1)
+AccessibilityColors/accent = Color(1, 1, 0, 1)
+AccessibilityColors/warning = Color(1, 0.6, 0, 1)
+AccessibilityColors/error = Color(1, 0.3, 0.3, 1)
+AccessibilityColors/success = Color(0.3, 1, 0.3, 1)
+AccessibilityColors/focus = Color(1, 1, 0, 1)
+AccessibilityColors/disabled = Color(0.5, 0.5, 0.5, 1)

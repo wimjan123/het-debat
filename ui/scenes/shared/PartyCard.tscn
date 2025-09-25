@@ -1,0 +1,135 @@
+[gd_scene load_steps=3 format=3 uid="uid://dk0o4rt0zrto0"]
+
+[ext_resource type="Script" path="res://ui/scenes/shared/party_card.gd" id="1_2k0o4"]
+[ext_resource type="Theme" path="res://ui/theme/default.tres" id="2_3k0o5"]
+
+[node name="PartyCard" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 200.0
+offset_bottom = 150.0
+theme = ExtResource("2_3k0o5")
+script = ExtResource("1_2k0o4")
+
+[node name="CardBackground" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CardBackground"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = -12.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HeaderContainer" type="HBoxContainer" parent="CardBackground/VBoxContainer"]
+layout_mode = 2
+
+[node name="PartyLogo" type="TextureRect" parent="CardBackground/VBoxContainer/HeaderContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(32, 32)
+expand_mode = 1
+stretch_mode = 5
+
+[node name="NameContainer" type="VBoxContainer" parent="CardBackground/VBoxContainer/HeaderContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PartyName" type="Label" parent="CardBackground/VBoxContainer/HeaderContainer/NameContainer"]
+layout_mode = 2
+text = "VVD"
+theme_type_variation = &"HeaderSmall"
+
+[node name="PartyFullName" type="Label" parent="CardBackground/VBoxContainer/HeaderContainer/NameContainer"]
+layout_mode = 2
+text = "Volkspartij voor Vrijheid"
+theme_type_variation = &"LabelSmall"
+autowrap_mode = 3
+
+[node name="HSeparator" type="HSeparator" parent="CardBackground/VBoxContainer"]
+layout_mode = 2
+
+[node name="SeatsContainer" type="HBoxContainer" parent="CardBackground/VBoxContainer"]
+layout_mode = 2
+
+[node name="CurrentSeatsContainer" type="VBoxContainer" parent="CardBackground/VBoxContainer/SeatsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CurrentSeatsLabel" type="Label" parent="CardBackground/VBoxContainer/SeatsContainer/CurrentSeatsContainer"]
+layout_mode = 2
+text = "Current"
+theme_type_variation = &"LabelSmall"
+horizontal_alignment = 1
+
+[node name="CurrentSeatsValue" type="Label" parent="CardBackground/VBoxContainer/SeatsContainer/CurrentSeatsContainer"]
+layout_mode = 2
+text = "34"
+horizontal_alignment = 1
+
+[node name="VSeparator" type="VSeparator" parent="CardBackground/VBoxContainer/SeatsContainer"]
+layout_mode = 2
+
+[node name="ProjectedSeatsContainer" type="VBoxContainer" parent="CardBackground/VBoxContainer/SeatsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ProjectedSeatsLabel" type="Label" parent="CardBackground/VBoxContainer/SeatsContainer/ProjectedSeatsContainer"]
+layout_mode = 2
+text = "Projected"
+theme_type_variation = &"LabelSmall"
+horizontal_alignment = 1
+
+[node name="ProjectedSeatsValue" type="Label" parent="CardBackground/VBoxContainer/SeatsContainer/ProjectedSeatsContainer"]
+layout_mode = 2
+text = "33"
+horizontal_alignment = 1
+
+[node name="HSeparator2" type="HSeparator" parent="CardBackground/VBoxContainer"]
+layout_mode = 2
+
+[node name="CompatibilityContainer" type="VBoxContainer" parent="CardBackground/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="CompatibilityLabel" type="Label" parent="CardBackground/VBoxContainer/CompatibilityContainer"]
+layout_mode = 2
+text = "Coalition Compatibility"
+theme_type_variation = &"LabelSmall"
+horizontal_alignment = 1
+
+[node name="CompatibilityIndicator" type="ProgressBar" parent="CardBackground/VBoxContainer/CompatibilityContainer"]
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+value = 0.75
+show_percentage = false
+
+[node name="ConflictIndicator" type="Label" parent="CardBackground/VBoxContainer/CompatibilityContainer"]
+layout_mode = 2
+text = "•"
+horizontal_alignment = 1
+modulate = Color(0, 1, 0, 1)
+
+[node name="InteractionArea" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+action_mode = 0
+
+[connection signal="mouse_entered" from="InteractionArea" to="." method="_on_interaction_area_mouse_entered"]
+[connection signal="mouse_exited" from="InteractionArea" to="." method="_on_interaction_area_mouse_exited"]
+[connection signal="pressed" from="InteractionArea" to="." method="_on_interaction_area_pressed"]

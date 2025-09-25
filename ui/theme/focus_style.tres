@@ -1,0 +1,1 @@
+[gd_resource type="StyleBoxFlat" format=3]\n\n[resource]\nbg_color = Color(1, 1, 1, 0.1)\nborder_width_left = 2\nborder_width_top = 2\nborder_width_right = 2\nborder_width_bottom = 2\nborder_color = Color(0.2, 0.6, 1, 1)\ncorner_radius_top_left = 4\ncorner_radius_top_right = 4\ncorner_radius_bottom_right = 4\ncorner_radius_bottom_left = 4\n

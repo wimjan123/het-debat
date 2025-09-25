@@ -1,0 +1,147 @@
+[gd_scene load_steps=4 format=3 uid="uid://cr4s8vw9dvw9"]
+
+[ext_resource type="Script" path="res://ui/scenes/media/media_interviews.gd" id="1_9r4s8"]
+[ext_resource type="Theme" path="res://ui/theme/default.tres" id="2_ar4s9"]
+[ext_resource type="PackedScene" uid="uid://fm2q6tv2btvq2" path="res://ui/scenes/shared/NavigationBar.tscn" id="3_br4sa"]
+
+[node name="MediaInterviews" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_ar4s9")
+script = ExtResource("1_9r4s8")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NavigationBar" parent="VBoxContainer" instance=ExtResource("3_br4sa")]
+layout_mode = 2
+
+[node name="MediaContent" type="HSplitContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="InterviewPanel" type="VBoxContainer" parent="VBoxContainer/MediaContent"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="InterviewTitle" type="Label" parent="VBoxContainer/MediaContent/InterviewPanel"]
+layout_mode = 2
+text = "Media Interviews & Press Events"
+theme_type_variation = &"HeaderMedium"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/MediaContent/InterviewPanel"]
+layout_mode = 2
+
+[node name="InterviewTabs" type="TabContainer" parent="VBoxContainer/MediaContent/InterviewPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Available" type="ScrollContainer" parent="VBoxContainer/MediaContent/InterviewPanel/InterviewTabs"]
+layout_mode = 2
+
+[node name="AvailableList" type="VBoxContainer" parent="VBoxContainer/MediaContent/InterviewPanel/InterviewTabs/Available"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Scheduled" type="ScrollContainer" parent="VBoxContainer/MediaContent/InterviewPanel/InterviewTabs"]
+layout_mode = 2
+
+[node name="ScheduledList" type="VBoxContainer" parent="VBoxContainer/MediaContent/InterviewPanel/InterviewTabs/Scheduled"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="History" type="ScrollContainer" parent="VBoxContainer/MediaContent/InterviewPanel/InterviewTabs"]
+layout_mode = 2
+
+[node name="HistoryList" type="VBoxContainer" parent="VBoxContainer/MediaContent/InterviewPanel/InterviewTabs/History"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="EventDetails" type="VBoxContainer" parent="VBoxContainer/MediaContent"]
+layout_mode = 2
+custom_minimum_size = Vector2(400, 0)
+
+[node name="DetailsTitle" type="Label" parent="VBoxContainer/MediaContent/EventDetails"]
+layout_mode = 2
+text = "Event Details"
+theme_type_variation = &"HeaderMedium"
+
+[node name="EventInfo" type="ScrollContainer" parent="VBoxContainer/MediaContent/EventDetails"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="InfoContainer" type="VBoxContainer" parent="VBoxContainer/MediaContent/EventDetails/EventInfo"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="EventName" type="Label" parent="VBoxContainer/MediaContent/EventDetails/EventInfo/InfoContainer"]
+layout_mode = 2
+text = "Select an event"
+theme_type_variation = &"HeaderSmall"
+autowrap_mode = 3
+
+[node name="OutletInfo" type="Label" parent="VBoxContainer/MediaContent/EventDetails/EventInfo/InfoContainer"]
+layout_mode = 2
+text = "Media Outlet: -"
+autowrap_mode = 3
+
+[node name="AudienceInfo" type="Label" parent="VBoxContainer/MediaContent/EventDetails/EventInfo/InfoContainer"]
+layout_mode = 2
+text = "Audience Reach: -"
+autowrap_mode = 3
+
+[node name="FormatInfo" type="Label" parent="VBoxContainer/MediaContent/EventDetails/EventInfo/InfoContainer"]
+layout_mode = 2
+text = "Format: -"
+autowrap_mode = 3
+
+[node name="TopicsInfo" type="Label" parent="VBoxContainer/MediaContent/EventDetails/EventInfo/InfoContainer"]
+layout_mode = 2
+text = "Focus Topics: -"
+autowrap_mode = 3
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer/MediaContent/EventDetails/EventInfo/InfoContainer"]
+layout_mode = 2
+
+[node name="ImpactPreview" type="VBoxContainer" parent="VBoxContainer/MediaContent/EventDetails/EventInfo/InfoContainer"]
+layout_mode = 2
+
+[node name="ImpactTitle" type="Label" parent="VBoxContainer/MediaContent/EventDetails/EventInfo/InfoContainer/ImpactPreview"]
+layout_mode = 2
+text = "Expected Impact"
+theme_type_variation = &"HeaderSmall"
+
+[node name="ImpactList" type="VBoxContainer" parent="VBoxContainer/MediaContent/EventDetails/EventInfo/InfoContainer/ImpactPreview"]
+layout_mode = 2
+
+[node name="HSeparator3" type="HSeparator" parent="VBoxContainer/MediaContent/EventDetails"]
+layout_mode = 2
+
+[node name="ActionButtons" type="VBoxContainer" parent="VBoxContainer/MediaContent/EventDetails"]
+layout_mode = 2
+
+[node name="ScheduleButton" type="Button" parent="VBoxContainer/MediaContent/EventDetails/ActionButtons"]
+layout_mode = 2
+text = "Schedule Interview"
+
+[node name="PrepareButton" type="Button" parent="VBoxContainer/MediaContent/EventDetails/ActionButtons"]
+layout_mode = 2
+text = "Prepare Talking Points"
+
+[node name="CancelButton" type="Button" parent="VBoxContainer/MediaContent/EventDetails/ActionButtons"]
+layout_mode = 2
+text = "Cancel Event"
+
+[connection signal="pressed" from="VBoxContainer/MediaContent/EventDetails/ActionButtons/ScheduleButton" to="." method="_on_schedule_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/MediaContent/EventDetails/ActionButtons/PrepareButton" to="." method="_on_prepare_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/MediaContent/EventDetails/ActionButtons/CancelButton" to="." method="_on_cancel_button_pressed"]

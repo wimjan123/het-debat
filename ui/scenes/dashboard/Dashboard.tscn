@@ -1,0 +1,120 @@
+[gd_scene load_steps=4 format=3 uid="uid://ho4s8vw4dvw4"]
+
+[ext_resource type="Script" path="res://ui/scenes/dashboard/dashboard.gd" id="1_6o4s8"]
+[ext_resource type="Theme" path="res://ui/theme/default.tres" id="2_7o4s9"]
+[ext_resource type="PackedScene" uid="uid://fm2q6tv2btvq2" path="res://ui/scenes/shared/NavigationBar.tscn" id="3_8o4sa"]
+
+[node name="Dashboard" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_7o4s9")
+script = ExtResource("1_6o4s8")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NavigationBar" parent="VBoxContainer" instance=ExtResource("3_8o4sa")]
+layout_mode = 2
+
+[node name="DashboardContent" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="LeftPanel" type="VBoxContainer" parent="VBoxContainer/DashboardContent"]
+layout_mode = 2
+custom_minimum_size = Vector2(250, 0)
+
+[node name="ActionsLabel" type="Label" parent="VBoxContainer/DashboardContent/LeftPanel"]
+layout_mode = 2
+text = "Campaign Actions"
+theme_type_variation = &"HeaderMedium"
+
+[node name="ActionsList" type="VBoxContainer" parent="VBoxContainer/DashboardContent/LeftPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RallyButton" type="Button" parent="VBoxContainer/DashboardContent/LeftPanel/ActionsList"]
+layout_mode = 2
+text = "Organize Rally"
+
+[node name="AdCampaignButton" type="Button" parent="VBoxContainer/DashboardContent/LeftPanel/ActionsList"]
+layout_mode = 2
+text = "Launch Ad Campaign"
+
+[node name="TalkShowButton" type="Button" parent="VBoxContainer/DashboardContent/LeftPanel/ActionsList"]
+layout_mode = 2
+text = "Book Talk Show"
+
+[node name="InterviewButton" type="Button" parent="VBoxContainer/DashboardContent/LeftPanel/ActionsList"]
+layout_mode = 2
+text = "Schedule Interview"
+
+[node name="SocialMediaButton" type="Button" parent="VBoxContainer/DashboardContent/LeftPanel/ActionsList"]
+layout_mode = 2
+text = "Social Media Post"
+
+[node name="CenterPanel" type="VBoxContainer" parent="VBoxContainer/DashboardContent"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TimelineLabel" type="Label" parent="VBoxContainer/DashboardContent/CenterPanel"]
+layout_mode = 2
+text = "Campaign Timeline"
+theme_type_variation = &"HeaderMedium"
+horizontal_alignment = 1
+
+[node name="TimelineContainer" type="ScrollContainer" parent="VBoxContainer/DashboardContent/CenterPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TimelineGrid" type="GridContainer" parent="VBoxContainer/DashboardContent/CenterPanel/TimelineContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+columns = 7
+
+[node name="RightPanel" type="VBoxContainer" parent="VBoxContainer/DashboardContent"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+
+[node name="KPILabel" type="Label" parent="VBoxContainer/DashboardContent/RightPanel"]
+layout_mode = 2
+text = "Key Performance Indicators"
+theme_type_variation = &"HeaderMedium"
+
+[node name="KPIContainer" type="VBoxContainer" parent="VBoxContainer/DashboardContent/RightPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/DashboardContent/RightPanel"]
+layout_mode = 2
+
+[node name="ExplanationLabel" type="Label" parent="VBoxContainer/DashboardContent/RightPanel"]
+layout_mode = 2
+text = "Why Panel"
+theme_type_variation = &"HeaderMedium"
+
+[node name="ExplanationPanel" type="ScrollContainer" parent="VBoxContainer/DashboardContent/RightPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ExplanationText" type="RichTextLabel" parent="VBoxContainer/DashboardContent/RightPanel/ExplanationPanel"]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "[b]Recent Changes:[/b]\n\n• Poll support increased by 2.1% due to successful interview\n• Campaign funds decreased by €15,000 from rally expenses\n• Party fatigue increased slightly from intense campaigning"
+fit_content = true
+
+[connection signal="pressed" from="VBoxContainer/DashboardContent/LeftPanel/ActionsList/RallyButton" to="." method="_on_rally_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/DashboardContent/LeftPanel/ActionsList/AdCampaignButton" to="." method="_on_ad_campaign_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/DashboardContent/LeftPanel/ActionsList/TalkShowButton" to="." method="_on_talk_show_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/DashboardContent/LeftPanel/ActionsList/InterviewButton" to="." method="_on_interview_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/DashboardContent/LeftPanel/ActionsList/SocialMediaButton" to="." method="_on_social_media_button_pressed"]

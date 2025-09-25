@@ -1,0 +1,170 @@
+[gd_scene load_steps=4 format=3 uid="uid://fu7v1xzc2gzc"]
+
+[ext_resource type="Script" path="res://ui/scenes/parliament/parliament.gd" id="1_cu7v1"]
+[ext_resource type="Theme" path="res://ui/theme/default.tres" id="2_du7v2"]
+[ext_resource type="PackedScene" uid="uid://fm2q6tv2btvq2" path="res://ui/scenes/shared/NavigationBar.tscn" id="3_eu7v3"]
+
+[node name="Parliament" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_du7v2")
+script = ExtResource("1_cu7v1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NavigationBar" parent="VBoxContainer" instance=ExtResource("3_eu7v3")]
+layout_mode = 2
+
+[node name="ParliamentContent" type="HSplitContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="LeftPanel" type="VBoxContainer" parent="VBoxContainer/ParliamentContent"]
+layout_mode = 2
+custom_minimum_size = Vector2(320, 0)
+
+[node name="BillsTitle" type="Label" parent="VBoxContainer/ParliamentContent/LeftPanel"]
+layout_mode = 2
+text = "Legislative Agenda"
+theme_type_variation = &"HeaderMedium"
+
+[node name="BillTabs" type="TabContainer" parent="VBoxContainer/ParliamentContent/LeftPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Active Bills" type="ScrollContainer" parent="VBoxContainer/ParliamentContent/LeftPanel/BillTabs"]
+layout_mode = 2
+
+[node name="ActiveBillsList" type="VBoxContainer" parent="VBoxContainer/ParliamentContent/LeftPanel/BillTabs/Active Bills"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Upcoming Votes" type="ScrollContainer" parent="VBoxContainer/ParliamentContent/LeftPanel/BillTabs"]
+layout_mode = 2
+
+[node name="UpcomingVotesList" type="VBoxContainer" parent="VBoxContainer/ParliamentContent/LeftPanel/BillTabs/Upcoming Votes"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Passed Laws" type="ScrollContainer" parent="VBoxContainer/ParliamentContent/LeftPanel/BillTabs"]
+layout_mode = 2
+
+[node name="PassedLawsList" type="VBoxContainer" parent="VBoxContainer/ParliamentContent/LeftPanel/BillTabs/Passed Laws"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CenterPanel" type="VBoxContainer" parent="VBoxContainer/ParliamentContent"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BillDetails" type="VBoxContainer" parent="VBoxContainer/ParliamentContent/CenterPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="BillTitle" type="Label" parent="VBoxContainer/ParliamentContent/CenterPanel/BillDetails"]
+layout_mode = 2
+text = "Select a bill to view details"
+theme_type_variation = &"HeaderMedium"
+autowrap_mode = 3
+
+[node name="BillSummary" type="ScrollContainer" parent="VBoxContainer/ParliamentContent/CenterPanel/BillDetails"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="SummaryText" type="RichTextLabel" parent="VBoxContainer/ParliamentContent/CenterPanel/BillDetails/BillSummary"]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "Bill details will appear here..."
+fit_content = true
+
+[node name="VotingSection" type="VBoxContainer" parent="VBoxContainer/ParliamentContent/CenterPanel"]
+layout_mode = 2
+
+[node name="VotingTitle" type="Label" parent="VBoxContainer/ParliamentContent/CenterPanel/VotingSection"]
+layout_mode = 2
+text = "Your Position"
+theme_type_variation = &"HeaderSmall"
+
+[node name="VotingOptions" type="HBoxContainer" parent="VBoxContainer/ParliamentContent/CenterPanel/VotingSection"]
+layout_mode = 2
+
+[node name="VoteForButton" type="Button" parent="VBoxContainer/ParliamentContent/CenterPanel/VotingSection/VotingOptions"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Vote FOR"
+
+[node name="VoteAgainstButton" type="Button" parent="VBoxContainer/ParliamentContent/CenterPanel/VotingSection/VotingOptions"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Vote AGAINST"
+
+[node name="AbstainButton" type="Button" parent="VBoxContainer/ParliamentContent/CenterPanel/VotingSection/VotingOptions"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "ABSTAIN"
+
+[node name="RightPanel" type="VBoxContainer" parent="VBoxContainer/ParliamentContent"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+
+[node name="VotingStatsTitle" type="Label" parent="VBoxContainer/ParliamentContent/RightPanel"]
+layout_mode = 2
+text = "Voting Analysis"
+theme_type_variation = &"HeaderMedium"
+
+[node name="VotingStats" type="ScrollContainer" parent="VBoxContainer/ParliamentContent/RightPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="StatsContent" type="VBoxContainer" parent="VBoxContainer/ParliamentContent/RightPanel/VotingStats"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VoteCount" type="VBoxContainer" parent="VBoxContainer/ParliamentContent/RightPanel/VotingStats/StatsContent"]
+layout_mode = 2
+
+[node name="VoteCountTitle" type="Label" parent="VBoxContainer/ParliamentContent/RightPanel/VotingStats/StatsContent/VoteCount"]
+layout_mode = 2
+text = "Current Vote Count"
+theme_type_variation = &"HeaderSmall"
+
+[node name="ForVotes" type="Label" parent="VBoxContainer/ParliamentContent/RightPanel/VotingStats/StatsContent/VoteCount"]
+layout_mode = 2
+text = "For: -- votes"
+
+[node name="AgainstVotes" type="Label" parent="VBoxContainer/ParliamentContent/RightPanel/VotingStats/StatsContent/VoteCount"]
+layout_mode = 2
+text = "Against: -- votes"
+
+[node name="Abstentions" type="Label" parent="VBoxContainer/ParliamentContent/RightPanel/VotingStats/StatsContent/VoteCount"]
+layout_mode = 2
+text = "Abstentions: -- votes"
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/ParliamentContent/RightPanel/VotingStats/StatsContent"]
+layout_mode = 2
+
+[node name="PartyPositions" type="VBoxContainer" parent="VBoxContainer/ParliamentContent/RightPanel/VotingStats/StatsContent"]
+layout_mode = 2
+
+[node name="PositionsTitle" type="Label" parent="VBoxContainer/ParliamentContent/RightPanel/VotingStats/StatsContent/PartyPositions"]
+layout_mode = 2
+text = "Party Positions"
+theme_type_variation = &"HeaderSmall"
+
+[node name="PositionsList" type="VBoxContainer" parent="VBoxContainer/ParliamentContent/RightPanel/VotingStats/StatsContent/PartyPositions"]
+layout_mode = 2
+
+[connection signal="pressed" from="VBoxContainer/ParliamentContent/CenterPanel/VotingSection/VotingOptions/VoteForButton" to="." method="_on_vote_for_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ParliamentContent/CenterPanel/VotingSection/VotingOptions/VoteAgainstButton" to="." method="_on_vote_against_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ParliamentContent/CenterPanel/VotingSection/VotingOptions/AbstainButton" to="." method="_on_abstain_button_pressed"]

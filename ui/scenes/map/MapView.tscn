@@ -1,0 +1,98 @@
+[gd_scene load_steps=4 format=3 uid="uid://bq3r7uv8cuv8"]
+
+[ext_resource type="Script" path="res://ui/scenes/map/map_view.gd" id="1_8q3r7"]
+[ext_resource type="Theme" path="res://ui/theme/default.tres" id="2_9q3r8"]
+[ext_resource type="PackedScene" uid="uid://fm2q6tv2btvq2" path="res://ui/scenes/shared/NavigationBar.tscn" id="3_aq3r9"]
+
+[node name="MapView" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_9q3r8")
+script = ExtResource("1_8q3r7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NavigationBar" parent="VBoxContainer" instance=ExtResource("3_aq3r9")]
+layout_mode = 2
+
+[node name="MapContent" type="HSplitContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MapDisplay" type="VBoxContainer" parent="VBoxContainer/MapContent"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MapTitle" type="Label" parent="VBoxContainer/MapContent/MapDisplay"]
+layout_mode = 2
+text = "Electoral Map - Netherlands"
+theme_type_variation = &"HeaderMedium"
+horizontal_alignment = 1
+
+[node name="MapContainer" type="ScrollContainer" parent="VBoxContainer/MapContent/MapDisplay"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MapGrid" type="GridContainer" parent="VBoxContainer/MapContent/MapDisplay/MapContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+columns = 4
+
+[node name="RegionDetails" type="VBoxContainer" parent="VBoxContainer/MapContent"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+
+[node name="DetailsTitle" type="Label" parent="VBoxContainer/MapContent/RegionDetails"]
+layout_mode = 2
+text = "Region Details"
+theme_type_variation = &"HeaderMedium"
+
+[node name="RegionName" type="Label" parent="VBoxContainer/MapContent/RegionDetails"]
+layout_mode = 2
+text = "Select a region"
+theme_type_variation = &"HeaderSmall"
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/MapContent/RegionDetails"]
+layout_mode = 2
+
+[node name="RegionStats" type="VBoxContainer" parent="VBoxContainer/MapContent/RegionDetails"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PopulationLabel" type="Label" parent="VBoxContainer/MapContent/RegionDetails/RegionStats"]
+layout_mode = 2
+text = "Population: -"
+
+[node name="SeatsLabel" type="Label" parent="VBoxContainer/MapContent/RegionDetails/RegionStats"]
+layout_mode = 2
+text = "Seats: -"
+
+[node name="TurnoutLabel" type="Label" parent="VBoxContainer/MapContent/RegionDetails/RegionStats"]
+layout_mode = 2
+text = "Expected Turnout: -"
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer/MapContent/RegionDetails"]
+layout_mode = 2
+
+[node name="PartySupport" type="VBoxContainer" parent="VBoxContainer/MapContent/RegionDetails"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="SupportTitle" type="Label" parent="VBoxContainer/MapContent/RegionDetails/PartySupport"]
+layout_mode = 2
+text = "Party Support"
+theme_type_variation = &"HeaderSmall"
+
+[node name="SupportList" type="VBoxContainer" parent="VBoxContainer/MapContent/RegionDetails/PartySupport"]
+layout_mode = 2
+size_flags_vertical = 3

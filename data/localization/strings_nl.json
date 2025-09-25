@@ -1,0 +1,257 @@
+{
+  "_meta": {
+    "language": "Nederlands",
+    "language_code": "nl",
+    "version": "1.0.0",
+    "contributors": ["Political Simulation Team"],
+    "last_updated": "2025-09-25"
+  },
+
+  "navigation": {
+    "dashboard": "Dashboard",
+    "map": "Kaart",
+    "media": "Media",
+    "debates": "Debatten",
+    "coalition": "Coalitie",
+    "parliament": "Parlement",
+    "social": "Sociale Media",
+    "results": "Resultaten",
+    "settings": "Instellingen",
+    "main_menu": "Hoofdmenu"
+  },
+
+  "main_menu": {
+    "title": "Debatnacht - Nederlandse Politiek Simulator",
+    "new_game": "Nieuw Spel",
+    "load_game": "Spel Laden",
+    "settings": "Instellingen",
+    "exit": "Afsluiten",
+    "subtitle": "Leidt uw partij naar verkiezingsoverwinning"
+  },
+
+  "dashboard": {
+    "title": "Campagne Dashboard",
+    "current_polls": "Huidige Peilingen",
+    "projected_seats": "Geprojecteerde Zetels",
+    "momentum": "Momentum",
+    "funds": "Campagnemiddelen",
+    "fatigue": "Vermoeidheid",
+    "weekly_trend": "Wekelijkse Trend",
+    "poll_percentage": "Peilingpercentage",
+    "seat_projection": "Zetelprojectie",
+    "funds_remaining": "Resterende Middelen",
+    "fatigue_level": "Vermoeidheidsniveau",
+    "trend_up": "Stijgend",
+    "trend_down": "Dalend",
+    "trend_stable": "Stabiel"
+  },
+
+  "map": {
+    "title": "Electorale Kaart",
+    "provinces": "Provincies",
+    "municipalities": "Gemeenten",
+    "support_filter": "Steunfilter",
+    "all_parties": "Alle Partijen",
+    "population": "Bevolking",
+    "seats": "Zetels",
+    "expected_turnout": "Verwachte Opkomst",
+    "party_support": "Partijsteun",
+    "select_region": "Selecteer een regio",
+    "no_polling_data": "Geen peilingsgegevens beschikbaar",
+    "polling_confidence": "Peilingsbetrouwbaarheid"
+  },
+
+  "media": {
+    "title": "Media-interviews",
+    "available": "Beschikbaar",
+    "scheduled": "Gepland",
+    "history": "Geschiedenis",
+    "schedule_interview": "Interview Inplannen",
+    "prepare": "Voorbereiden",
+    "cancel": "Annuleren",
+    "outlet": "Media-outlet",
+    "audience_reach": "Bereik van publiek",
+    "format": "Format",
+    "topics": "Onderwerpen",
+    "impact_preview": "Impact Voorvertoning",
+    "awareness": "Bekendheid",
+    "credibility": "Geloofwaardigheid",
+    "support_change": "Steunverandering"
+  },
+
+  "debates": {
+    "title": "Debat Arena",
+    "upcoming_debates": "Komende Debatten",
+    "preparation": "Voorbereiding",
+    "talking_points": "Gespreksonderwerpen",
+    "opponent_analysis": "Tegenstander Analyse",
+    "stance_selection": "Standpunt Selectie",
+    "progressive": "Progressief",
+    "conservative": "Conservatief",
+    "moderate": "Gematigd",
+    "prepare_for_debate": "Voorbereiden op Debat"
+  },
+
+  "coalition": {
+    "title": "Coalitie Builder",
+    "available_parties": "Beschikbare Partijen",
+    "current_coalition": "Huidige Coalitie",
+    "total_seats": "Totale Zetels",
+    "majority_required": "Meerderheid Vereist",
+    "compatibility": "Compatibiliteit",
+    "policy_alignment": "Beleidsovereenstemming",
+    "economic": "Economisch",
+    "social": "Sociaal",
+    "environmental": "Milieu",
+    "immigration": "Immigratie",
+    "save_coalition": "Coalitie Opslaan",
+    "test_coalition": "Coalitie Testen",
+    "clear_coalition": "Coalitie Wissen",
+    "majority": "Meerderheid",
+    "all_parties": "Alle Partijen",
+    "compatible_only": "Alleen Compatibele",
+    "large_parties": "Grote Partijen",
+    "small_parties": "Kleine Partijen"
+  },
+
+  "parliament": {
+    "title": "Tweede Kamer",
+    "active_bills": "Actieve Wetsvoorstellen",
+    "upcoming_votes": "Komende Stemmingen",
+    "passed_laws": "Aangenomen Wetten",
+    "vote_for": "Voor Stemmen",
+    "vote_against": "Tegen Stemmen",
+    "abstain": "Onthouding",
+    "bill_details": "Wetsvoorstel Details",
+    "voting_stats": "Stemstatistieken",
+    "party_positions": "Partijstandpunten",
+    "for_votes": "Voor",
+    "against_votes": "Tegen",
+    "abstentions": "Onthoudingen",
+    "committee": "Commissie",
+    "first_reading": "Eerste Lezing",
+    "second_reading": "Tweede Lezing",
+    "senate": "Eerste Kamer"
+  },
+
+  "social": {
+    "title": "Sociale Media",
+    "compose_post": "Bericht Opstellen",
+    "scheduled_posts": "Geplande Berichten",
+    "analytics": "Analyses",
+    "engagement": "Betrokkenheid",
+    "reach": "Bereik",
+    "sentiment": "Sentiment",
+    "post_now": "Nu Plaatsen",
+    "schedule_post": "Bericht Inplannen",
+    "hashtags": "Hashtags",
+    "mentions": "Vermeldingen"
+  },
+
+  "results": {
+    "title": "Verkiezingsresultaten",
+    "final_results": "Definitieve Resultaten",
+    "seat_distribution": "Zetelverdeling",
+    "vote_share": "Stemmenaandeel",
+    "coalition_possibilities": "Coalitiemogelijkheden",
+    "turnout": "Opkomst",
+    "dhondt_calculation": "D'Hondt Berekening",
+    "electoral_threshold": "Kiesdrempel"
+  },
+
+  "settings": {
+    "title": "Instellingen",
+    "language": "Taal",
+    "accessibility": "Toegankelijkheid",
+    "audio": "Audio",
+    "graphics": "Grafiek",
+    "gameplay": "Gameplay",
+    "dutch": "Nederlands",
+    "english": "Engels",
+    "text_size": "Tekstgrootte",
+    "high_contrast": "Hoog Contrast",
+    "screen_reader": "Schermlezer",
+    "keyboard_navigation": "Toetsenbordnavigatie",
+    "save_settings": "Instellingen Opslaan",
+    "reset_defaults": "Standaardwaarden Herstellen"
+  },
+
+  "parties": {
+    "vvd": "Volkspartij voor Vrijheid en Democratie",
+    "pvda": "Partij van de Arbeid",
+    "pvv": "Partij voor de Vrijheid",
+    "cda": "Christen-Democratisch Appèl",
+    "d66": "Democraten 66",
+    "groenlinks": "GroenLinks",
+    "sp": "Socialistische Partij",
+    "cu": "ChristenUnie",
+    "sgp": "Staatkundig Gereformeerde Partij",
+    "fvd": "Forum voor Democratie",
+    "pvdd": "Partij voor de Dieren",
+    "50plus": "50PLUS",
+    "volt": "Volt Nederland",
+    "ja21": "JA21",
+    "bij1": "BIJ1"
+  },
+
+  "tooltips": {
+    "calculation_title_polling": "Peiling Berekening",
+    "calculation_title_seats": "Zetel Berekening",
+    "calculation_title_coalition": "Coalitie Analyse",
+    "calculation_title_dhondt": "D'Hondt Methode",
+    "calculation_title_general": "Berekening",
+    "no_calculation_steps": "Geen berekeningsstappen beschikbaar",
+    "no_data_sources": "Geen gegevensbronnen beschikbaar",
+    "polling_explanation": "Peilingen worden geaggregeerd van meerdere bronnen met weging voor betrouwbaarheid",
+    "dhondt_explanation": "Zetels worden toegewezen volgens de D'Hondt methode met 0,67% kiesdrempel",
+    "coalition_explanation": "Coalitiecompatibiliteit gebaseerd op beleidsposities en historische patronen"
+  },
+
+  "notifications": {
+    "game_saved": "Spel opgeslagen",
+    "game_loaded": "Spel geladen",
+    "settings_saved": "Instellingen opgeslagen",
+    "interview_scheduled": "Interview ingepland",
+    "bill_voted": "Stem uitgebracht op wetsvoorstel",
+    "coalition_formed": "Coalitie gevormd",
+    "error_occurred": "Er is een fout opgetreden",
+    "data_updated": "Gegevens bijgewerkt",
+    "calculation_completed": "Berekening voltooid"
+  },
+
+  "actions": {
+    "save": "Opslaan",
+    "load": "Laden",
+    "cancel": "Annuleren",
+    "confirm": "Bevestigen",
+    "back": "Terug",
+    "next": "Volgende",
+    "continue": "Doorgaan",
+    "retry": "Opnieuw Proberen",
+    "close": "Sluiten",
+    "edit": "Bewerken",
+    "delete": "Verwijderen",
+    "add": "Toevoegen",
+    "remove": "Verwijderen",
+    "select": "Selecteren",
+    "deselect": "Deselecteren"
+  },
+
+  "time": {
+    "days_remaining": "Dagen Resterend",
+    "weeks_remaining": "Weken Resterend",
+    "election_day": "Verkiezingsdag",
+    "campaign_day": "Campagnedag",
+    "morning": "Ochtend",
+    "afternoon": "Middag",
+    "evening": "Avond",
+    "night": "Nacht",
+    "monday": "Maandag",
+    "tuesday": "Dinsdag",
+    "wednesday": "Woensdag",
+    "thursday": "Donderdag",
+    "friday": "Vrijdag",
+    "saturday": "Zaterdag",
+    "sunday": "Zondag"
+  }
+}

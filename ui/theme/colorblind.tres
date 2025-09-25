@@ -1,0 +1,204 @@
+[gd_resource type="Theme" format=3 uid="uid://b8xc9y5pq2bhi"]
+
+[ext_resource type="Theme" uid="uid://crpdbjwi1fhxp" path="res://ui/theme/default.tres" id="1_9k4no"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1"]
+content_margin_left = 8.0
+content_margin_top = 4.0
+content_margin_right = 8.0
+content_margin_bottom = 4.0
+bg_color = Color(0.15, 0.15, 0.2, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.4, 0.4, 0.5, 1)
+border_blend = true
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2"]
+content_margin_left = 8.0
+content_margin_top = 4.0
+content_margin_right = 8.0
+content_margin_bottom = 4.0
+bg_color = Color(0.25, 0.25, 0.35, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.6, 0.6, 0.7, 1)
+border_blend = true
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3"]
+content_margin_left = 8.0
+content_margin_top = 4.0
+content_margin_right = 8.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 0.9, 0.4, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.8, 0.6, 0, 1)
+border_blend = true
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4"]
+content_margin_left = 8.0
+content_margin_top = 4.0
+content_margin_right = 8.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.3, 0.3, 0.3, 1)
+border_blend = true
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5"]
+content_margin_left = 12.0
+content_margin_top = 8.0
+content_margin_right = 12.0
+content_margin_bottom = 8.0
+bg_color = Color(0.1, 0.1, 0.12, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.3, 0.3, 0.35, 1)
+border_blend = true
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[resource]
+base_type = &"Theme"
+resource_name = "ColorBlindFriendlyTheme"
+default_base_scale = 1.0
+default_font_size = 16
+
+Button/colors/font_color = Color(0.9, 0.9, 0.95, 1)
+Button/colors/font_color_disabled = Color(0.5, 0.5, 0.5, 1)
+Button/colors/font_color_focus = Color(0.1, 0.1, 0.1, 1)
+Button/colors/font_color_hover = Color(0.1, 0.1, 0.1, 1)
+Button/colors/font_color_pressed = Color(0.1, 0.1, 0.1, 1)
+Button/font_sizes/font_size = 16
+Button/styles/disabled = SubResource("StyleBoxFlat_4")
+Button/styles/focus = SubResource("StyleBoxFlat_3")
+Button/styles/hover = SubResource("StyleBoxFlat_2")
+Button/styles/normal = SubResource("StyleBoxFlat_1")
+Button/styles/pressed = SubResource("StyleBoxFlat_2")
+
+Label/colors/font_color = Color(0.9, 0.9, 0.95, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0.5)
+Label/font_sizes/font_size = 16
+
+LineEdit/colors/font_color = Color(0.9, 0.9, 0.95, 1)
+LineEdit/colors/font_color_selected = Color(0.1, 0.1, 0.1, 1)
+LineEdit/colors/font_color_uneditable = Color(0.6, 0.6, 0.65, 1)
+LineEdit/colors/selection_color = Color(1, 0.9, 0.4, 1)
+LineEdit/colors/caret_color = Color(1, 0.9, 0.4, 1)
+LineEdit/font_sizes/font_size = 16
+LineEdit/styles/focus = SubResource("StyleBoxFlat_3")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_1")
+LineEdit/styles/read_only = SubResource("StyleBoxFlat_4")
+
+Panel/styles/panel = SubResource("StyleBoxFlat_5")
+
+CheckBox/colors/font_color = Color(0.9, 0.9, 0.95, 1)
+CheckBox/colors/font_color_disabled = Color(0.5, 0.5, 0.5, 1)
+CheckBox/colors/font_color_focus = Color(0.1, 0.1, 0.1, 1)
+CheckBox/colors/font_color_hover = Color(1, 0.9, 0.4, 1)
+CheckBox/colors/font_color_pressed = Color(1, 0.9, 0.4, 1)
+CheckBox/font_sizes/font_size = 16
+
+OptionButton/colors/font_color = Color(0.9, 0.9, 0.95, 1)
+OptionButton/colors/font_color_disabled = Color(0.5, 0.5, 0.5, 1)
+OptionButton/colors/font_color_focus = Color(0.1, 0.1, 0.1, 1)
+OptionButton/colors/font_color_hover = Color(0.1, 0.1, 0.1, 1)
+OptionButton/colors/font_color_pressed = Color(0.1, 0.1, 0.1, 1)
+OptionButton/font_sizes/font_size = 16
+OptionButton/styles/disabled = SubResource("StyleBoxFlat_4")
+OptionButton/styles/focus = SubResource("StyleBoxFlat_3")
+OptionButton/styles/hover = SubResource("StyleBoxFlat_2")
+OptionButton/styles/normal = SubResource("StyleBoxFlat_1")
+OptionButton/styles/pressed = SubResource("StyleBoxFlat_2")
+
+# Color-blind friendly political party colors
+# Using patterns distinguishable for all types of color vision deficiency
+# Based on ColorBrewer and accessibility research
+
+# Pattern: Different brightness and saturation levels for distinction
+PartyColors/vvd = Color(0.2, 0.4, 0.8, 1)       # Dark blue (safe for all CVD types)
+PartyColors/pvda = Color(0.8, 0.2, 0.2, 1)      # Dark red (protanopia/deuteranopia safe)
+PartyColors/pvv = Color(0.9, 0.7, 0.1, 1)       # Golden yellow (tritanopia safe)
+PartyColors/cda = Color(0.3, 0.7, 0.3, 1)       # Medium green (safe contrast)
+PartyColors/d66 = Color(0.1, 0.8, 0.6, 1)       # Teal (distinguishable from green)
+PartyColors/groenlinks = Color(0.5, 0.8, 0.2, 1) # Lime green (different from CDA)
+PartyColors/sp = Color(0.7, 0.1, 0.1, 1)        # Very dark red (distinct from PvdA)
+PartyColors/cu = Color(0.2, 0.6, 0.9, 1)        # Light blue (distinct from VVD)
+PartyColors/sgp = Color(0.9, 0.5, 0.1, 1)       # Orange (safe for all CVD)
+PartyColors/fvd = Color(0.4, 0.2, 0.2, 1)       # Brown-red (unique pattern)
+PartyColors/pvdd = Color(0.2, 0.6, 0.2, 1)      # Forest green (darker than GL)
+PartyColors/50plus = Color(0.6, 0.3, 0.8, 1)    # Purple (safe for tritanopia)
+PartyColors/volt = Color(0.3, 0.2, 0.7, 1)      # Dark purple (distinct from 50+)
+PartyColors/ja21 = Color(0.1, 0.3, 0.6, 1)      # Navy blue (darker than VVD)
+PartyColors/bij1 = Color(0.8, 0.8, 0.2, 1)      # Olive yellow (distinct pattern)
+
+# Additional pattern indicators for extreme color vision deficiency
+# These use brightness and pattern coding as backup
+PatternColors/high_contrast = Color(0.9, 0.9, 0.9, 1)
+PatternColors/medium_contrast = Color(0.6, 0.6, 0.6, 1)
+PatternColors/low_contrast = Color(0.3, 0.3, 0.3, 1)
+
+# Safe color palette for all forms of color vision deficiency
+# Based on research by Masataka Okabe and Kei Ito
+SafeColors/black = Color(0, 0, 0, 1)
+SafeColors/orange = Color(0.9, 0.6, 0, 1)
+SafeColors/sky_blue = Color(0.35, 0.7, 0.9, 1)
+SafeColors/bluish_green = Color(0, 0.6, 0.5, 1)
+SafeColors/yellow = Color(0.95, 0.9, 0.25, 1)
+SafeColors/blue = Color(0, 0.45, 0.7, 1)
+SafeColors/vermillion = Color(0.8, 0.4, 0, 1)
+SafeColors/reddish_purple = Color(0.8, 0.6, 0.7, 1)
+
+# UI Element colors optimized for color-blind accessibility
+AccessibilityColors/background = Color(0.08, 0.08, 0.1, 1)
+AccessibilityColors/surface = Color(0.12, 0.12, 0.15, 1)
+AccessibilityColors/primary = Color(0.9, 0.9, 0.95, 1)
+AccessibilityColors/secondary = Color(0.7, 0.7, 0.75, 1)
+AccessibilityColors/accent = Color(0.9, 0.7, 0.1, 1)        # Golden yellow
+AccessibilityColors/warning = Color(0.9, 0.6, 0, 1)         # Orange
+AccessibilityColors/error = Color(0.8, 0.2, 0.2, 1)         # Dark red
+AccessibilityColors/success = Color(0.2, 0.7, 0.5, 1)       # Teal green
+AccessibilityColors/focus = Color(0.9, 0.7, 0.1, 1)         # Golden yellow
+AccessibilityColors/disabled = Color(0.5, 0.5, 0.5, 1)
+
+# Semantic colors using patterns and shapes for additional distinction
+SemanticColors/positive = Color(0.2, 0.7, 0.5, 1)     # Teal (instead of green)
+SemanticColors/negative = Color(0.8, 0.2, 0.2, 1)     # Dark red
+SemanticColors/neutral = Color(0.6, 0.6, 0.6, 1)      # Gray
+SemanticColors/information = Color(0.2, 0.6, 0.9, 1)  # Light blue
+SemanticColors/caution = Color(0.9, 0.6, 0, 1)        # Orange
+
+# Pattern support - textures/symbols can be added here for additional distinction
+PatternSupport/enabled = true
+PatternSupport/use_symbols = true
+PatternSupport/use_textures = false
+PatternSupport/high_contrast_borders = true

@@ -1,0 +1,157 @@
+[gd_scene load_steps=4 format=3 uid="uid://et6u0wyb1fxb"]
+
+[ext_resource type="Script" path="res://ui/scenes/coalition/coalition_builder.gd" id="1_bt6u0"]
+[ext_resource type="Theme" path="res://ui/theme/default.tres" id="2_ct6u1"]
+[ext_resource type="PackedScene" uid="uid://fm2q6tv2btvq2" path="res://ui/scenes/shared/NavigationBar.tscn" id="3_dt6u2"]
+
+[node name="CoalitionBuilder" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_ct6u1")
+script = ExtResource("1_bt6u0")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NavigationBar" parent="VBoxContainer" instance=ExtResource("3_dt6u2")]
+layout_mode = 2
+
+[node name="CoalitionContent" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="AvailableParties" type="VBoxContainer" parent="VBoxContainer/CoalitionContent"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+
+[node name="AvailableTitle" type="Label" parent="VBoxContainer/CoalitionContent/AvailableParties"]
+layout_mode = 2
+text = "Available Parties"
+theme_type_variation = &"HeaderMedium"
+
+[node name="PartyFilter" type="HBoxContainer" parent="VBoxContainer/CoalitionContent/AvailableParties"]
+layout_mode = 2
+
+[node name="FilterLabel" type="Label" parent="VBoxContainer/CoalitionContent/AvailableParties/PartyFilter"]
+layout_mode = 2
+text = "Filter:"
+
+[node name="FilterOptions" type="OptionButton" parent="VBoxContainer/CoalitionContent/AvailableParties/PartyFilter"]
+layout_mode = 2
+size_flags_horizontal = 3
+selected = 0
+item_count = 4
+popup/item_0/text = "All Parties"
+popup/item_0/id = 0
+popup/item_1/text = "Compatible Only"
+popup/item_1/id = 1
+popup/item_2/text = "Large Parties"
+popup/item_2/id = 2
+popup/item_3/text = "Small Parties"
+popup/item_3/id = 3
+
+[node name="AvailableList" type="ScrollContainer" parent="VBoxContainer/CoalitionContent/AvailableParties"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="AvailableContainer" type="VBoxContainer" parent="VBoxContainer/CoalitionContent/AvailableParties/AvailableList"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CoalitionWorkspace" type="VBoxContainer" parent="VBoxContainer/CoalitionContent"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="WorkspaceTitle" type="Label" parent="VBoxContainer/CoalitionContent/CoalitionWorkspace"]
+layout_mode = 2
+text = "Coalition Builder"
+theme_type_variation = &"HeaderMedium"
+horizontal_alignment = 1
+
+[node name="CoalitionDropZone" type="PanelContainer" parent="VBoxContainer/CoalitionContent/CoalitionWorkspace"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="DropLabel" type="Label" parent="VBoxContainer/CoalitionContent/CoalitionWorkspace/CoalitionDropZone"]
+layout_mode = 2
+text = "Drag parties here to build coalition"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CoalitionParties" type="VBoxContainer" parent="VBoxContainer/CoalitionContent/CoalitionWorkspace/CoalitionDropZone"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="CoalitionControls" type="HBoxContainer" parent="VBoxContainer/CoalitionContent/CoalitionWorkspace"]
+layout_mode = 2
+
+[node name="ClearButton" type="Button" parent="VBoxContainer/CoalitionContent/CoalitionWorkspace/CoalitionControls"]
+layout_mode = 2
+text = "Clear Coalition"
+
+[node name="SaveButton" type="Button" parent="VBoxContainer/CoalitionContent/CoalitionWorkspace/CoalitionControls"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Save Coalition"
+
+[node name="TestButton" type="Button" parent="VBoxContainer/CoalitionContent/CoalitionWorkspace/CoalitionControls"]
+layout_mode = 2
+text = "Test Viability"
+
+[node name="CoalitionStats" type="VBoxContainer" parent="VBoxContainer/CoalitionContent"]
+layout_mode = 2
+custom_minimum_size = Vector2(280, 0)
+
+[node name="StatsTitle" type="Label" parent="VBoxContainer/CoalitionContent/CoalitionStats"]
+layout_mode = 2
+text = "Coalition Analysis"
+theme_type_variation = &"HeaderMedium"
+
+[node name="StatsContainer" type="ScrollContainer" parent="VBoxContainer/CoalitionContent/CoalitionStats"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="StatsContent" type="VBoxContainer" parent="VBoxContainer/CoalitionContent/CoalitionStats/StatsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SeatCount" type="Label" parent="VBoxContainer/CoalitionContent/CoalitionStats/StatsContainer/StatsContent"]
+layout_mode = 2
+text = "Total Seats: 0/150"
+
+[node name="MajorityStatus" type="Label" parent="VBoxContainer/CoalitionContent/CoalitionStats/StatsContainer/StatsContent"]
+layout_mode = 2
+text = "Majority: No"
+
+[node name="CompatibilityScore" type="Label" parent="VBoxContainer/CoalitionContent/CoalitionStats/StatsContainer/StatsContent"]
+layout_mode = 2
+text = "Compatibility: --"
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/CoalitionContent/CoalitionStats/StatsContainer/StatsContent"]
+layout_mode = 2
+
+[node name="PolicyAlignment" type="VBoxContainer" parent="VBoxContainer/CoalitionContent/CoalitionStats/StatsContainer/StatsContent"]
+layout_mode = 2
+
+[node name="PolicyTitle" type="Label" parent="VBoxContainer/CoalitionContent/CoalitionStats/StatsContainer/StatsContent/PolicyAlignment"]
+layout_mode = 2
+text = "Policy Alignment"
+theme_type_variation = &"HeaderSmall"
+
+[node name="PolicyList" type="VBoxContainer" parent="VBoxContainer/CoalitionContent/CoalitionStats/StatsContainer/StatsContent/PolicyAlignment"]
+layout_mode = 2
+
+[connection signal="item_selected" from="VBoxContainer/CoalitionContent/AvailableParties/PartyFilter/FilterOptions" to="." method="_on_filter_options_item_selected"]
+[connection signal="pressed" from="VBoxContainer/CoalitionContent/CoalitionWorkspace/CoalitionControls/ClearButton" to="." method="_on_clear_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/CoalitionContent/CoalitionWorkspace/CoalitionControls/SaveButton" to="." method="_on_save_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/CoalitionContent/CoalitionWorkspace/CoalitionControls/TestButton" to="." method="_on_test_button_pressed"]

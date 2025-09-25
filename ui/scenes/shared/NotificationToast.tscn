@@ -1,0 +1,79 @@
+[gd_scene load_steps=3 format=3 uid="uid://el1p5su1asup1"]
+
+[ext_resource type="Script" path="res://ui/scenes/shared/notification_toast.gd" id="1_3l1p5"]
+[ext_resource type="Theme" path="res://ui/theme/default.tres" id="2_4l1p6"]
+
+[node name="NotificationToast" type="Control"]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -320.0
+offset_bottom = 80.0
+grow_horizontal = 0
+theme = ExtResource("2_4l1p6")
+script = ExtResource("1_3l1p5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="ToastBackground" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ToastBackground"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="IconContainer" type="VBoxContainer" parent="ToastBackground/HBoxContainer"]
+layout_mode = 2
+
+[node name="MessageIcon" type="TextureRect" parent="ToastBackground/HBoxContainer/IconContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(24, 24)
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VSeparator" type="VSeparator" parent="ToastBackground/HBoxContainer"]
+layout_mode = 2
+
+[node name="ContentContainer" type="VBoxContainer" parent="ToastBackground/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MessageText" type="RichTextLabel" parent="ToastBackground/HBoxContainer/ContentContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "Action completed successfully"
+fit_content = true
+
+[node name="ActionContainer" type="HBoxContainer" parent="ToastBackground/HBoxContainer/ContentContainer"]
+layout_mode = 2
+
+[node name="ActionButton" type="Button" parent="ToastBackground/HBoxContainer/ContentContainer/ActionContainer"]
+layout_mode = 2
+text = "Undo"
+flat = true
+
+[node name="VSeparator2" type="VSeparator" parent="ToastBackground/HBoxContainer"]
+layout_mode = 2
+
+[node name="CloseButton" type="Button" parent="ToastBackground/HBoxContainer"]
+layout_mode = 2
+text = "×"
+flat = true
+
+[connection signal="pressed" from="ToastBackground/HBoxContainer/ContentContainer/ActionContainer/ActionButton" to="." method="_on_action_button_pressed"]
+[connection signal="pressed" from="ToastBackground/HBoxContainer/CloseButton" to="." method="_on_close_button_pressed"]

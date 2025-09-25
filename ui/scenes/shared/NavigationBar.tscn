@@ -1,0 +1,122 @@
+[gd_scene load_steps=3 format=3 uid="uid://fm2q6tv2btvq2"]
+
+[ext_resource type="Script" path="res://ui/scenes/shared/navigation_bar.gd" id="1_4m2q6"]
+[ext_resource type="Theme" path="res://ui/theme/default.tres" id="2_5m2q7"]
+
+[node name="NavigationBar" type="Control"]
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 60.0
+grow_horizontal = 2
+theme = ExtResource("2_5m2q7")
+script = ExtResource("1_4m2q6")
+
+[node name="NavigationBackground" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NavigationBackground"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 10.0
+offset_right = -20.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LogoContainer" type="VBoxContainer" parent="NavigationBackground/HBoxContainer"]
+layout_mode = 2
+
+[node name="GameTitle" type="Label" parent="NavigationBackground/HBoxContainer/LogoContainer"]
+layout_mode = 2
+text = "Het Debat"
+theme_type_variation = &"HeaderMedium"
+
+[node name="NavigationButtons" type="HBoxContainer" parent="NavigationBackground/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="DashboardButton" type="Button" parent="NavigationBackground/HBoxContainer/NavigationButtons"]
+layout_mode = 2
+text = "Dashboard"
+flat = true
+
+[node name="MapButton" type="Button" parent="NavigationBackground/HBoxContainer/NavigationButtons"]
+layout_mode = 2
+text = "Map"
+flat = true
+
+[node name="MediaButton" type="Button" parent="NavigationBackground/HBoxContainer/NavigationButtons"]
+layout_mode = 2
+text = "Media"
+flat = true
+
+[node name="DebateButton" type="Button" parent="NavigationBackground/HBoxContainer/NavigationButtons"]
+layout_mode = 2
+text = "Debate"
+flat = true
+
+[node name="CoalitionButton" type="Button" parent="NavigationBackground/HBoxContainer/NavigationButtons"]
+layout_mode = 2
+text = "Coalition"
+flat = true
+
+[node name="ParliamentButton" type="Button" parent="NavigationBackground/HBoxContainer/NavigationButtons"]
+layout_mode = 2
+text = "Parliament"
+flat = true
+
+[node name="SocialButton" type="Button" parent="NavigationBackground/HBoxContainer/NavigationButtons"]
+layout_mode = 2
+text = "Social"
+flat = true
+
+[node name="ResultsButton" type="Button" parent="NavigationBackground/HBoxContainer/NavigationButtons"]
+layout_mode = 2
+text = "Results"
+flat = true
+
+[node name="UtilityButtons" type="HBoxContainer" parent="NavigationBackground/HBoxContainer"]
+layout_mode = 2
+
+[node name="LanguageButton" type="OptionButton" parent="NavigationBackground/HBoxContainer/UtilityButtons"]
+layout_mode = 2
+selected = 0
+item_count = 2
+popup/item_0/text = "NL"
+popup/item_0/id = 0
+popup/item_1/text = "EN"
+popup/item_1/id = 1
+
+[node name="AccessibilityButton" type="Button" parent="NavigationBackground/HBoxContainer/UtilityButtons"]
+layout_mode = 2
+text = "A"
+tooltip_text = "Accessibility Options"
+flat = true
+
+[node name="SettingsButton" type="Button" parent="NavigationBackground/HBoxContainer/UtilityButtons"]
+layout_mode = 2
+text = "⚙"
+tooltip_text = "Settings"
+flat = true
+
+[connection signal="pressed" from="NavigationBackground/HBoxContainer/NavigationButtons/DashboardButton" to="." method="_on_navigation_button_pressed" binds= ["dashboard"]]
+[connection signal="pressed" from="NavigationBackground/HBoxContainer/NavigationButtons/MapButton" to="." method="_on_navigation_button_pressed" binds= ["map"]]
+[connection signal="pressed" from="NavigationBackground/HBoxContainer/NavigationButtons/MediaButton" to="." method="_on_navigation_button_pressed" binds= ["media"]]
+[connection signal="pressed" from="NavigationBackground/HBoxContainer/NavigationButtons/DebateButton" to="." method="_on_navigation_button_pressed" binds= ["debate"]]
+[connection signal="pressed" from="NavigationBackground/HBoxContainer/NavigationButtons/CoalitionButton" to="." method="_on_navigation_button_pressed" binds= ["coalition"]]
+[connection signal="pressed" from="NavigationBackground/HBoxContainer/NavigationButtons/ParliamentButton" to="." method="_on_navigation_button_pressed" binds= ["parliament"]]
+[connection signal="pressed" from="NavigationBackground/HBoxContainer/NavigationButtons/SocialButton" to="." method="_on_navigation_button_pressed" binds= ["social"]]
+[connection signal="pressed" from="NavigationBackground/HBoxContainer/NavigationButtons/ResultsButton" to="." method="_on_navigation_button_pressed" binds= ["results"]]
+[connection signal="item_selected" from="NavigationBackground/HBoxContainer/UtilityButtons/LanguageButton" to="." method="_on_language_button_item_selected"]
+[connection signal="pressed" from="NavigationBackground/HBoxContainer/UtilityButtons/AccessibilityButton" to="." method="_on_accessibility_button_pressed"]
+[connection signal="pressed" from="NavigationBackground/HBoxContainer/UtilityButtons/SettingsButton" to="." method="_on_settings_button_pressed"]

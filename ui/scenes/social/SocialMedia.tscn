@@ -1,0 +1,211 @@
+[gd_scene load_steps=4 format=3 uid="uid://gv8w2y0d3h0d"]
+
+[ext_resource type="Script" path="res://ui/scenes/social/social_media.gd" id="1_dv8w2"]
+[ext_resource type="Theme" path="res://ui/theme/default.tres" id="2_ev8w3"]
+[ext_resource type="PackedScene" uid="uid://fm2q6tv2btvq2" path="res://ui/scenes/shared/NavigationBar.tscn" id="3_fv8w4"]
+
+[node name="SocialMedia" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_ev8w3")
+script = ExtResource("1_dv8w2")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NavigationBar" parent="VBoxContainer" instance=ExtResource("3_fv8w4")]
+layout_mode = 2
+
+[node name="SocialContent" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PostComposer" type="VBoxContainer" parent="VBoxContainer/SocialContent"]
+layout_mode = 2
+custom_minimum_size = Vector2(350, 0)
+
+[node name="ComposerTitle" type="Label" parent="VBoxContainer/SocialContent/PostComposer"]
+layout_mode = 2
+text = "Create Social Media Post"
+theme_type_variation = &"HeaderMedium"
+
+[node name="PlatformSelector" type="HBoxContainer" parent="VBoxContainer/SocialContent/PostComposer"]
+layout_mode = 2
+
+[node name="PlatformLabel" type="Label" parent="VBoxContainer/SocialContent/PostComposer/PlatformSelector"]
+layout_mode = 2
+text = "Platform:"
+
+[node name="PlatformOptions" type="OptionButton" parent="VBoxContainer/SocialContent/PostComposer/PlatformSelector"]
+layout_mode = 2
+size_flags_horizontal = 3
+selected = 0
+item_count = 3
+popup/item_0/text = "Twitter/X"
+popup/item_0/id = 0
+popup/item_1/text = "Facebook"
+popup/item_1/id = 1
+popup/item_2/text = "LinkedIn"
+popup/item_2/id = 2
+
+[node name="PostContent" type="VBoxContainer" parent="VBoxContainer/SocialContent/PostComposer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ContentLabel" type="Label" parent="VBoxContainer/SocialContent/PostComposer/PostContent"]
+layout_mode = 2
+text = "Message:"
+
+[node name="MessageInput" type="TextEdit" parent="VBoxContainer/SocialContent/PostComposer/PostContent"]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "What's on your mind? Share your political message..."
+
+[node name="CharacterCount" type="Label" parent="VBoxContainer/SocialContent/PostComposer/PostContent"]
+layout_mode = 2
+text = "0/280 characters"
+horizontal_alignment = 2
+
+[node name="PostOptions" type="VBoxContainer" parent="VBoxContainer/SocialContent/PostComposer"]
+layout_mode = 2
+
+[node name="OptionsLabel" type="Label" parent="VBoxContainer/SocialContent/PostComposer/PostOptions"]
+layout_mode = 2
+text = "Post Type:"
+
+[node name="PostTypeButtons" type="HBoxContainer" parent="VBoxContainer/SocialContent/PostComposer/PostOptions"]
+layout_mode = 2
+
+[node name="PolicyButton" type="Button" parent="VBoxContainer/SocialContent/PostComposer/PostOptions/PostTypeButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Policy Update"
+
+[node name="OpinionButton" type="Button" parent="VBoxContainer/SocialContent/PostComposer/PostOptions/PostTypeButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Opinion"
+
+[node name="ResponseButton" type="Button" parent="VBoxContainer/SocialContent/PostComposer/PostOptions/PostTypeButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Response"
+
+[node name="PostControls" type="HBoxContainer" parent="VBoxContainer/SocialContent/PostComposer"]
+layout_mode = 2
+
+[node name="SaveDraftButton" type="Button" parent="VBoxContainer/SocialContent/PostComposer/PostControls"]
+layout_mode = 2
+text = "Save Draft"
+
+[node name="PostButton" type="Button" parent="VBoxContainer/SocialContent/PostComposer/PostControls"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Post Message"
+
+[node name="FeedContainer" type="VBoxContainer" parent="VBoxContainer/SocialContent"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FeedTitle" type="Label" parent="VBoxContainer/SocialContent/FeedContainer"]
+layout_mode = 2
+text = "Social Media Feed"
+theme_type_variation = &"HeaderMedium"
+horizontal_alignment = 1
+
+[node name="FeedTabs" type="TabContainer" parent="VBoxContainer/SocialContent/FeedContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Your Posts" type="ScrollContainer" parent="VBoxContainer/SocialContent/FeedContainer/FeedTabs"]
+layout_mode = 2
+
+[node name="YourPostsList" type="VBoxContainer" parent="VBoxContainer/SocialContent/FeedContainer/FeedTabs/Your Posts"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Trending" type="ScrollContainer" parent="VBoxContainer/SocialContent/FeedContainer/FeedTabs"]
+layout_mode = 2
+
+[node name="TrendingList" type="VBoxContainer" parent="VBoxContainer/SocialContent/FeedContainer/FeedTabs/Trending"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Mentions" type="ScrollContainer" parent="VBoxContainer/SocialContent/FeedContainer/FeedTabs"]
+layout_mode = 2
+
+[node name="MentionsList" type="VBoxContainer" parent="VBoxContainer/SocialContent/FeedContainer/FeedTabs/Mentions"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Analytics" type="VBoxContainer" parent="VBoxContainer/SocialContent"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 0)
+
+[node name="AnalyticsTitle" type="Label" parent="VBoxContainer/SocialContent/Analytics"]
+layout_mode = 2
+text = "Social Media Analytics"
+theme_type_variation = &"HeaderMedium"
+
+[node name="StatsContainer" type="ScrollContainer" parent="VBoxContainer/SocialContent/Analytics"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="StatsContent" type="VBoxContainer" parent="VBoxContainer/SocialContent/Analytics/StatsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="EngagementStats" type="VBoxContainer" parent="VBoxContainer/SocialContent/Analytics/StatsContainer/StatsContent"]
+layout_mode = 2
+
+[node name="EngagementTitle" type="Label" parent="VBoxContainer/SocialContent/Analytics/StatsContainer/StatsContent/EngagementStats"]
+layout_mode = 2
+text = "Engagement"
+theme_type_variation = &"HeaderSmall"
+
+[node name="Followers" type="Label" parent="VBoxContainer/SocialContent/Analytics/StatsContainer/StatsContent/EngagementStats"]
+layout_mode = 2
+text = "Followers: 0"
+
+[node name="Likes" type="Label" parent="VBoxContainer/SocialContent/Analytics/StatsContainer/StatsContent/EngagementStats"]
+layout_mode = 2
+text = "Avg Likes: 0"
+
+[node name="Shares" type="Label" parent="VBoxContainer/SocialContent/Analytics/StatsContainer/StatsContent/EngagementStats"]
+layout_mode = 2
+text = "Avg Shares: 0"
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/SocialContent/Analytics/StatsContainer/StatsContent"]
+layout_mode = 2
+
+[node name="ReachStats" type="VBoxContainer" parent="VBoxContainer/SocialContent/Analytics/StatsContainer/StatsContent"]
+layout_mode = 2
+
+[node name="ReachTitle" type="Label" parent="VBoxContainer/SocialContent/Analytics/StatsContainer/StatsContent/ReachStats"]
+layout_mode = 2
+text = "Reach & Impact"
+theme_type_variation = &"HeaderSmall"
+
+[node name="WeeklyReach" type="Label" parent="VBoxContainer/SocialContent/Analytics/StatsContainer/StatsContent/ReachStats"]
+layout_mode = 2
+text = "Weekly Reach: 0"
+
+[node name="PoliticalImpact" type="Label" parent="VBoxContainer/SocialContent/Analytics/StatsContainer/StatsContent/ReachStats"]
+layout_mode = 2
+text = "Political Impact: 0%"
+
+[connection signal="text_changed" from="VBoxContainer/SocialContent/PostComposer/PostContent/MessageInput" to="." method="_on_message_input_text_changed"]
+[connection signal="pressed" from="VBoxContainer/SocialContent/PostComposer/PostOptions/PostTypeButtons/PolicyButton" to="." method="_on_policy_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/SocialContent/PostComposer/PostOptions/PostTypeButtons/OpinionButton" to="." method="_on_opinion_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/SocialContent/PostComposer/PostOptions/PostTypeButtons/ResponseButton" to="." method="_on_response_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/SocialContent/PostComposer/PostControls/SaveDraftButton" to="." method="_on_save_draft_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/SocialContent/PostComposer/PostControls/PostButton" to="." method="_on_post_button_pressed"]

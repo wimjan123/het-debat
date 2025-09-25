@@ -1,0 +1,652 @@
+{
+  "_meta": {
+    "data_source": "Dutch Electoral Commission (Kiesraad) and Parliamentary Documentation Centre",
+    "reference_period": "1945-2023",
+    "last_updated": "2025-09-25",
+    "validation": "politically_neutral",
+    "contributors": ["Political Simulation Team"],
+    "version": "1.0.0"
+  },
+
+  "electoral_system": {
+    "seats_total": 150,
+    "electoral_threshold": 0.67,
+    "method": "dhondt",
+    "districts": 19
+  },
+
+  "parties": {
+    "vvd": {
+      "full_name": "Volkspartij voor Vrijheid en Democratie",
+      "short_name": "VVD",
+      "english_name": "People's Party for Freedom and Democracy",
+      "founded": 1948,
+      "ideology": ["liberalism", "economic_liberalism", "social_liberalism"],
+      "position": {
+        "economic": 7.2,
+        "social": 6.1,
+        "environmental": 5.5,
+        "immigration": 6.8,
+        "european": 7.1
+      },
+      "color": "#003da5",
+      "historical_performance": {
+        "2021": {"seats": 34, "votes": 21.9},
+        "2017": {"seats": 33, "votes": 21.3},
+        "2012": {"seats": 41, "votes": 26.6},
+        "2010": {"seats": 31, "votes": 20.5}
+      },
+      "coalition_history": {
+        "rutte_iv": {"partner": true, "role": "lead", "years": "2022-"},
+        "rutte_iii": {"partner": true, "role": "lead", "years": "2017-2021"},
+        "rutte_ii": {"partner": true, "role": "lead", "years": "2012-2017"},
+        "rutte_i": {"partner": true, "role": "lead", "years": "2010-2012"}
+      },
+      "compatibility": {
+        "d66": 8.5,
+        "cda": 7.8,
+        "cu": 6.2,
+        "pvda": 4.1,
+        "groenlinks": 3.2,
+        "sp": 2.1,
+        "pvv": 3.5,
+        "fvd": 2.8,
+        "volt": 5.9,
+        "ja21": 6.7,
+        "sgp": 5.1,
+        "pvdd": 4.3,
+        "50plus": 5.8,
+        "bij1": 1.9
+      }
+    },
+
+    "pvda": {
+      "full_name": "Partij van de Arbeid",
+      "short_name": "PvdA",
+      "english_name": "Labour Party",
+      "founded": 1946,
+      "ideology": ["social_democracy", "democratic_socialism", "progressivism"],
+      "position": {
+        "economic": 2.8,
+        "social": 2.1,
+        "environmental": 7.8,
+        "immigration": 4.2,
+        "european": 8.1
+      },
+      "color": "#dc143c",
+      "historical_performance": {
+        "2021": {"seats": 9, "votes": 5.7},
+        "2017": {"seats": 9, "votes": 5.7},
+        "2012": {"seats": 38, "votes": 24.8},
+        "2010": {"seats": 30, "votes": 19.6}
+      },
+      "coalition_history": {
+        "rutte_ii": {"partner": true, "role": "junior", "years": "2012-2017"},
+        "balkenende_iv": {"partner": true, "role": "junior", "years": "2007-2010"},
+        "kok_ii": {"partner": true, "role": "lead", "years": "1998-2002"},
+        "kok_i": {"partner": true, "role": "lead", "years": "1994-1998"}
+      },
+      "compatibility": {
+        "d66": 7.9,
+        "groenlinks": 8.7,
+        "sp": 7.2,
+        "volt": 8.1,
+        "bij1": 7.5,
+        "pvdd": 6.8,
+        "cu": 5.1,
+        "cda": 4.9,
+        "vvd": 4.1,
+        "50plus": 6.2,
+        "sgp": 3.1,
+        "pvv": 1.8,
+        "fvd": 1.5,
+        "ja21": 2.9
+      }
+    },
+
+    "pvv": {
+      "full_name": "Partij voor de Vrijheid",
+      "short_name": "PVV",
+      "english_name": "Party for Freedom",
+      "founded": 2006,
+      "ideology": ["right_wing_populism", "nationalism", "euroscepticism"],
+      "position": {
+        "economic": 4.5,
+        "social": 7.8,
+        "environmental": 3.2,
+        "immigration": 9.1,
+        "european": 1.9
+      },
+      "color": "#ffdd00",
+      "historical_performance": {
+        "2021": {"seats": 17, "votes": 10.8},
+        "2017": {"seats": 20, "votes": 13.1},
+        "2012": {"seats": 15, "votes": 10.1},
+        "2010": {"seats": 24, "votes": 15.4}
+      },
+      "coalition_history": {
+        "rutte_i": {"partner": false, "role": "support", "years": "2010-2012", "note": "gedoogakkoord"}
+      },
+      "compatibility": {
+        "fvd": 6.8,
+        "ja21": 7.2,
+        "sgp": 4.1,
+        "50plus": 3.8,
+        "vvd": 3.5,
+        "cda": 2.1,
+        "cu": 1.9,
+        "d66": 1.2,
+        "pvda": 1.8,
+        "groenlinks": 0.8,
+        "sp": 1.5,
+        "volt": 0.9,
+        "pvdd": 1.1,
+        "bij1": 0.5
+      }
+    },
+
+    "cda": {
+      "full_name": "Christen-Democratisch Appèl",
+      "short_name": "CDA",
+      "english_name": "Christian Democratic Appeal",
+      "founded": 1980,
+      "ideology": ["christian_democracy", "conservatism", "social_conservatism"],
+      "position": {
+        "economic": 5.8,
+        "social": 6.9,
+        "environmental": 6.2,
+        "immigration": 6.5,
+        "european": 7.2
+      },
+      "color": "#00a54f",
+      "historical_performance": {
+        "2021": {"seats": 15, "votes": 9.5},
+        "2017": {"seats": 19, "votes": 12.4},
+        "2012": {"seats": 13, "votes": 8.5},
+        "2010": {"seats": 21, "votes": 13.7}
+      },
+      "coalition_history": {
+        "rutte_iv": {"partner": true, "role": "junior", "years": "2022-"},
+        "rutte_iii": {"partner": true, "role": "junior", "years": "2017-2021"},
+        "balkenende_iv": {"partner": true, "role": "lead", "years": "2007-2010"},
+        "balkenende_iii": {"partner": true, "role": "lead", "years": "2006-2007"}
+      },
+      "compatibility": {
+        "vvd": 7.8,
+        "cu": 8.2,
+        "d66": 6.5,
+        "sgp": 7.1,
+        "pvda": 4.9,
+        "50plus": 6.1,
+        "ja21": 5.8,
+        "volt": 4.2,
+        "groenlinks": 3.8,
+        "sp": 3.1,
+        "pvdd": 4.5,
+        "pvv": 2.1,
+        "fvd": 2.8,
+        "bij1": 2.5
+      }
+    },
+
+    "d66": {
+      "full_name": "Democraten 66",
+      "short_name": "D66",
+      "english_name": "Democrats 66",
+      "founded": 1966,
+      "ideology": ["social_liberalism", "progressivism", "pro_europeanism"],
+      "position": {
+        "economic": 6.2,
+        "social": 2.8,
+        "environmental": 7.9,
+        "immigration": 3.5,
+        "european": 8.8
+      },
+      "color": "#32cd32",
+      "historical_performance": {
+        "2021": {"seats": 24, "votes": 15.0},
+        "2017": {"seats": 19, "votes": 12.2},
+        "2012": {"seats": 12, "votes": 8.0},
+        "2010": {"seats": 10, "votes": 6.9}
+      },
+      "coalition_history": {
+        "rutte_iv": {"partner": true, "role": "junior", "years": "2022-"},
+        "rutte_iii": {"partner": true, "role": "junior", "years": "2017-2021"},
+        "kok_ii": {"partner": true, "role": "junior", "years": "1998-2002"},
+        "kok_i": {"partner": true, "role": "junior", "years": "1994-1998"}
+      },
+      "compatibility": {
+        "vvd": 8.5,
+        "pvda": 7.9,
+        "volt": 8.9,
+        "groenlinks": 7.5,
+        "cu": 5.8,
+        "cda": 6.5,
+        "bij1": 5.2,
+        "pvdd": 6.1,
+        "sp": 4.8,
+        "50plus": 5.5,
+        "sgp": 3.9,
+        "ja21": 4.1,
+        "fvd": 2.2,
+        "pvv": 1.2
+      }
+    },
+
+    "groenlinks": {
+      "full_name": "GroenLinks",
+      "short_name": "GL",
+      "english_name": "GreenLeft",
+      "founded": 1989,
+      "ideology": ["green_politics", "democratic_socialism", "environmentalism"],
+      "position": {
+        "economic": 2.1,
+        "social": 1.8,
+        "environmental": 9.2,
+        "immigration": 2.5,
+        "european": 8.5
+      },
+      "color": "#80bb3a",
+      "historical_performance": {
+        "2021": {"seats": 8, "votes": 5.2},
+        "2017": {"seats": 14, "votes": 9.1},
+        "2012": {"seats": 4, "votes": 2.3},
+        "2010": {"seats": 10, "votes": 6.7}
+      },
+      "coalition_history": {},
+      "compatibility": {
+        "pvda": 8.7,
+        "d66": 7.5,
+        "volt": 8.2,
+        "bij1": 7.8,
+        "sp": 7.1,
+        "pvdd": 8.5,
+        "cu": 4.2,
+        "cda": 3.8,
+        "50plus": 4.1,
+        "vvd": 3.2,
+        "sgp": 2.8,
+        "ja21": 2.1,
+        "fvd": 1.5,
+        "pvv": 0.8
+      }
+    },
+
+    "sp": {
+      "full_name": "Socialistische Partij",
+      "short_name": "SP",
+      "english_name": "Socialist Party",
+      "founded": 1971,
+      "ideology": ["democratic_socialism", "left_wing_populism", "euroscepticism"],
+      "position": {
+        "economic": 1.5,
+        "social": 2.5,
+        "environmental": 7.1,
+        "immigration": 5.2,
+        "european": 3.8
+      },
+      "color": "#dc143c",
+      "historical_performance": {
+        "2021": {"seats": 9, "votes": 5.9},
+        "2017": {"seats": 14, "votes": 9.1},
+        "2012": {"seats": 15, "votes": 9.7},
+        "2010": {"seats": 15, "votes": 9.6}
+      },
+      "coalition_history": {},
+      "compatibility": {
+        "pvda": 7.2,
+        "groenlinks": 7.1,
+        "bij1": 8.1,
+        "pvdd": 6.8,
+        "50plus": 5.9,
+        "volt": 4.8,
+        "d66": 4.8,
+        "cu": 3.5,
+        "cda": 3.1,
+        "sgp": 2.8,
+        "vvd": 2.1,
+        "ja21": 2.5,
+        "fvd": 2.1,
+        "pvv": 1.5
+      }
+    },
+
+    "cu": {
+      "full_name": "ChristenUnie",
+      "short_name": "CU",
+      "english_name": "ChristianUnion",
+      "founded": 2000,
+      "ideology": ["christian_democracy", "social_conservatism", "christian_left"],
+      "position": {
+        "economic": 4.2,
+        "social": 7.5,
+        "environmental": 7.8,
+        "immigration": 5.8,
+        "european": 6.9
+      },
+      "color": "#00a5dc",
+      "historical_performance": {
+        "2021": {"seats": 5, "votes": 3.4},
+        "2017": {"seats": 5, "votes": 3.4},
+        "2012": {"seats": 5, "votes": 3.1},
+        "2010": {"seats": 5, "votes": 3.2}
+      },
+      "coalition_history": {
+        "rutte_iv": {"partner": true, "role": "junior", "years": "2022-"},
+        "rutte_iii": {"partner": true, "role": "junior", "years": "2017-2021"},
+        "balkenende_iv": {"partner": true, "role": "junior", "years": "2007-2010"}
+      },
+      "compatibility": {
+        "cda": 8.2,
+        "sgp": 7.8,
+        "vvd": 6.2,
+        "d66": 5.8,
+        "pvda": 5.1,
+        "50plus": 5.8,
+        "ja21": 4.2,
+        "groenlinks": 4.2,
+        "volt": 4.1,
+        "pvdd": 5.5,
+        "sp": 3.5,
+        "bij1": 3.1,
+        "fvd": 2.8,
+        "pvv": 1.9
+      }
+    },
+
+    "sgp": {
+      "full_name": "Staatkundig Gereformeerde Partij",
+      "short_name": "SGP",
+      "english_name": "Reformed Political Party",
+      "founded": 1918,
+      "ideology": ["christian_fundamentalism", "social_conservatism", "theocracy"],
+      "position": {
+        "economic": 5.5,
+        "social": 8.9,
+        "environmental": 5.2,
+        "immigration": 7.2,
+        "european": 4.1
+      },
+      "color": "#f47920",
+      "historical_performance": {
+        "2021": {"seats": 3, "votes": 2.1},
+        "2017": {"seats": 3, "votes": 2.1},
+        "2012": {"seats": 3, "votes": 2.1},
+        "2010": {"seats": 2, "votes": 1.7}
+      },
+      "coalition_history": {},
+      "compatibility": {
+        "cu": 7.8,
+        "cda": 7.1,
+        "vvd": 5.1,
+        "50plus": 5.2,
+        "ja21": 4.8,
+        "pvv": 4.1,
+        "d66": 3.9,
+        "fvd": 3.5,
+        "pvda": 3.1,
+        "sp": 2.8,
+        "groenlinks": 2.8,
+        "volt": 2.5,
+        "pvdd": 3.1,
+        "bij1": 1.8
+      }
+    },
+
+    "fvd": {
+      "full_name": "Forum voor Democratie",
+      "short_name": "FVD",
+      "english_name": "Forum for Democracy",
+      "founded": 2016,
+      "ideology": ["right_wing_populism", "nationalism", "euroscepticism"],
+      "position": {
+        "economic": 6.2,
+        "social": 8.1,
+        "environmental": 2.8,
+        "immigration": 8.9,
+        "european": 2.1
+      },
+      "color": "#800020",
+      "historical_performance": {
+        "2021": {"seats": 8, "votes": 5.0},
+        "2017": {"seats": 2, "votes": 1.8}
+      },
+      "coalition_history": {},
+      "compatibility": {
+        "pvv": 6.8,
+        "ja21": 6.2,
+        "sgp": 3.5,
+        "50plus": 3.1,
+        "cda": 2.8,
+        "cu": 2.8,
+        "vvd": 2.8,
+        "d66": 2.2,
+        "fvd": 10.0,
+        "pvda": 1.5,
+        "groenlinks": 1.5,
+        "sp": 2.1,
+        "volt": 1.2,
+        "pvdd": 1.8,
+        "bij1": 0.8
+      }
+    },
+
+    "pvdd": {
+      "full_name": "Partij voor de Dieren",
+      "short_name": "PvdD",
+      "english_name": "Party for the Animals",
+      "founded": 2002,
+      "ideology": ["animal_rights", "environmentalism", "green_politics"],
+      "position": {
+        "economic": 3.8,
+        "social": 3.5,
+        "environmental": 9.5,
+        "immigration": 4.1,
+        "european": 6.8
+      },
+      "color": "#006c2d",
+      "historical_performance": {
+        "2021": {"seats": 6, "votes": 3.8},
+        "2017": {"seats": 5, "votes": 3.2},
+        "2012": {"seats": 2, "votes": 1.9},
+        "2010": {"seats": 2, "votes": 1.3}
+      },
+      "coalition_history": {},
+      "compatibility": {
+        "groenlinks": 8.5,
+        "sp": 6.8,
+        "pvda": 6.8,
+        "d66": 6.1,
+        "bij1": 7.2,
+        "volt": 6.5,
+        "cu": 5.5,
+        "50plus": 4.8,
+        "cda": 4.5,
+        "vvd": 4.3,
+        "sgp": 3.1,
+        "ja21": 2.8,
+        "fvd": 1.8,
+        "pvv": 1.1
+      }
+    },
+
+    "50plus": {
+      "full_name": "50PLUS",
+      "short_name": "50+",
+      "english_name": "50PLUS",
+      "founded": 2009,
+      "ideology": ["pensioner_interests", "centrism", "social_liberalism"],
+      "position": {
+        "economic": 4.8,
+        "social": 5.2,
+        "environmental": 6.1,
+        "immigration": 5.8,
+        "european": 6.5
+      },
+      "color": "#663399",
+      "historical_performance": {
+        "2021": {"seats": 1, "votes": 1.0},
+        "2017": {"seats": 4, "votes": 3.1},
+        "2012": {"seats": 2, "votes": 1.9},
+        "2010": {"seats": 0, "votes": 0.0}
+      },
+      "coalition_history": {},
+      "compatibility": {
+        "cda": 6.1,
+        "pvda": 6.2,
+        "vvd": 5.8,
+        "cu": 5.8,
+        "d66": 5.5,
+        "sgp": 5.2,
+        "sp": 5.9,
+        "pvdd": 4.8,
+        "groenlinks": 4.1,
+        "volt": 4.5,
+        "ja21": 4.1,
+        "pvv": 3.8,
+        "fvd": 3.1,
+        "bij1": 3.8
+      }
+    },
+
+    "volt": {
+      "full_name": "Volt Nederland",
+      "short_name": "Volt",
+      "english_name": "Volt Netherlands",
+      "founded": 2018,
+      "ideology": ["pro_europeanism", "liberalism", "progressivism"],
+      "position": {
+        "economic": 5.8,
+        "social": 2.5,
+        "environmental": 8.8,
+        "immigration": 3.1,
+        "european": 9.5
+      },
+      "color": "#502379",
+      "historical_performance": {
+        "2021": {"seats": 3, "votes": 2.4},
+        "2017": {"seats": 0, "votes": 0.0}
+      },
+      "coalition_history": {},
+      "compatibility": {
+        "d66": 8.9,
+        "groenlinks": 8.2,
+        "pvda": 8.1,
+        "pvdd": 6.5,
+        "vvd": 5.9,
+        "bij1": 6.8,
+        "sp": 4.8,
+        "50plus": 4.5,
+        "cda": 4.2,
+        "cu": 4.1,
+        "ja21": 3.2,
+        "sgp": 2.5,
+        "fvd": 1.2,
+        "pvv": 0.9
+      }
+    },
+
+    "ja21": {
+      "full_name": "JA21",
+      "short_name": "JA21",
+      "english_name": "JA21",
+      "founded": 2020,
+      "ideology": ["conservatism", "liberal_conservatism", "euroscepticism"],
+      "position": {
+        "economic": 6.8,
+        "social": 7.2,
+        "environmental": 4.5,
+        "immigration": 7.8,
+        "european": 4.2
+      },
+      "color": "#0066cc",
+      "historical_performance": {
+        "2021": {"seats": 3, "votes": 2.4}
+      },
+      "coalition_history": {},
+      "compatibility": {
+        "pvv": 7.2,
+        "vvd": 6.7,
+        "fvd": 6.2,
+        "cda": 5.8,
+        "sgp": 4.8,
+        "cu": 4.2,
+        "d66": 4.1,
+        "50plus": 4.1,
+        "volt": 3.2,
+        "sp": 2.5,
+        "pvda": 2.9,
+        "pvdd": 2.8,
+        "groenlinks": 2.1,
+        "bij1": 1.8
+      }
+    },
+
+    "bij1": {
+      "full_name": "BIJ1",
+      "short_name": "BIJ1",
+      "english_name": "BIJ1",
+      "founded": 2017,
+      "ideology": ["radical_left", "anti_racism", "intersectional_feminism"],
+      "position": {
+        "economic": 1.2,
+        "social": 1.5,
+        "environmental": 8.5,
+        "immigration": 1.8,
+        "european": 6.2
+      },
+      "color": "#ffff00",
+      "historical_performance": {
+        "2021": {"seats": 1, "votes": 0.8}
+      },
+      "coalition_history": {},
+      "compatibility": {
+        "sp": 8.1,
+        "groenlinks": 7.8,
+        "pvda": 7.5,
+        "pvdd": 7.2,
+        "volt": 6.8,
+        "d66": 5.2,
+        "50plus": 3.8,
+        "cu": 3.1,
+        "cda": 2.5,
+        "vvd": 1.9,
+        "sgp": 1.8,
+        "ja21": 1.8,
+        "fvd": 0.8,
+        "pvv": 0.5
+      }
+    }
+  },
+
+  "coalition_templates": {
+    "purple_coalition": {
+      "description": "Liberal-Social Democratic alliance",
+      "typical_parties": ["vvd", "pvda", "d66"],
+      "historical_examples": ["kok_i", "kok_ii", "rutte_ii"]
+    },
+    "christian_coalition": {
+      "description": "Christian Democratic alliance",
+      "typical_parties": ["cda", "cu", "sgp"],
+      "historical_examples": ["balkenende_i", "balkenende_iii"]
+    },
+    "left_coalition": {
+      "description": "Progressive left alliance",
+      "typical_parties": ["pvda", "groenlinks", "sp", "d66"],
+      "historical_examples": []
+    },
+    "right_coalition": {
+      "description": "Conservative right alliance",
+      "typical_parties": ["vvd", "cda", "pvv", "fvd"],
+      "historical_examples": []
+    }
+  },
+
+  "validation_rules": {
+    "minimum_seats_majority": 76,
+    "maximum_coalition_size": 5,
+    "compatibility_threshold": 4.0,
+    "ideological_distance_limit": 8.0,
+    "historical_precedence_weight": 0.3
+  }
+}

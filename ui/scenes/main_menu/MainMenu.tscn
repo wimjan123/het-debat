@@ -1,0 +1,108 @@
+[gd_scene load_steps=3 format=3 uid="uid://gn3r7uv3cuv3"]
+
+[ext_resource type="Script" path="res://ui/scenes/main_menu/main_menu.gd" id="1_5n3r7"]
+[ext_resource type="Theme" path="res://ui/theme/default.tres" id="2_6n3r8"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_6n3r8")
+script = ExtResource("1_5n3r7")
+
+[node name="BackgroundPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BackgroundPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 200.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameTitle" type="Label" parent="BackgroundPanel/VBoxContainer"]
+layout_mode = 2
+text = "Het Debat"
+theme_type_variation = &"HeaderLarge"
+horizontal_alignment = 1
+
+[node name="GameSubtitle" type="Label" parent="BackgroundPanel/VBoxContainer"]
+layout_mode = 2
+text = "Dutch Politics Simulation Game"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="HSeparator" type="HSeparator" parent="BackgroundPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="MenuButtons" type="VBoxContainer" parent="BackgroundPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="NewGameButton" type="Button" parent="BackgroundPanel/VBoxContainer/MenuButtons"]
+layout_mode = 2
+text = "New Campaign"
+
+[node name="LoadGameButton" type="Button" parent="BackgroundPanel/VBoxContainer/MenuButtons"]
+layout_mode = 2
+text = "Load Campaign"
+
+[node name="ScenarioButton" type="Button" parent="BackgroundPanel/VBoxContainer/MenuButtons"]
+layout_mode = 2
+text = "Scenarios"
+
+[node name="SettingsButton" type="Button" parent="BackgroundPanel/VBoxContainer/MenuButtons"]
+layout_mode = 2
+text = "Settings"
+
+[node name="AboutButton" type="Button" parent="BackgroundPanel/VBoxContainer/MenuButtons"]
+layout_mode = 2
+text = "About"
+
+[node name="ExitButton" type="Button" parent="BackgroundPanel/VBoxContainer/MenuButtons"]
+layout_mode = 2
+text = "Exit"
+
+[node name="HSeparator2" type="HSeparator" parent="BackgroundPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="LanguageContainer" type="HBoxContainer" parent="BackgroundPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="LanguageLabel" type="Label" parent="BackgroundPanel/VBoxContainer/LanguageContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Language:"
+
+[node name="LanguageOption" type="OptionButton" parent="BackgroundPanel/VBoxContainer/LanguageContainer"]
+layout_mode = 2
+selected = 0
+item_count = 2
+popup/item_0/text = "Nederlands"
+popup/item_0/id = 0
+popup/item_1/text = "English"
+popup/item_1/id = 1
+
+[connection signal="pressed" from="BackgroundPanel/VBoxContainer/MenuButtons/NewGameButton" to="." method="_on_new_game_button_pressed"]
+[connection signal="pressed" from="BackgroundPanel/VBoxContainer/MenuButtons/LoadGameButton" to="." method="_on_load_game_button_pressed"]
+[connection signal="pressed" from="BackgroundPanel/VBoxContainer/MenuButtons/ScenarioButton" to="." method="_on_scenario_button_pressed"]
+[connection signal="pressed" from="BackgroundPanel/VBoxContainer/MenuButtons/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="BackgroundPanel/VBoxContainer/MenuButtons/AboutButton" to="." method="_on_about_button_pressed"]
+[connection signal="pressed" from="BackgroundPanel/VBoxContainer/MenuButtons/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="item_selected" from="BackgroundPanel/VBoxContainer/LanguageContainer/LanguageOption" to="." method="_on_language_option_item_selected"]

@@ -1,0 +1,257 @@
+{
+  "_meta": {
+    "language": "English",
+    "language_code": "en",
+    "version": "1.0.0",
+    "contributors": ["Political Simulation Team"],
+    "last_updated": "2025-09-25"
+  },
+
+  "navigation": {
+    "dashboard": "Dashboard",
+    "map": "Map",
+    "media": "Media",
+    "debates": "Debates",
+    "coalition": "Coalition",
+    "parliament": "Parliament",
+    "social": "Social Media",
+    "results": "Results",
+    "settings": "Settings",
+    "main_menu": "Main Menu"
+  },
+
+  "main_menu": {
+    "title": "Debatnacht - Dutch Politics Simulator",
+    "new_game": "New Game",
+    "load_game": "Load Game",
+    "settings": "Settings",
+    "exit": "Exit",
+    "subtitle": "Lead your party to electoral victory"
+  },
+
+  "dashboard": {
+    "title": "Campaign Dashboard",
+    "current_polls": "Current Polls",
+    "projected_seats": "Projected Seats",
+    "momentum": "Momentum",
+    "funds": "Campaign Funds",
+    "fatigue": "Fatigue",
+    "weekly_trend": "Weekly Trend",
+    "poll_percentage": "Poll Percentage",
+    "seat_projection": "Seat Projection",
+    "funds_remaining": "Funds Remaining",
+    "fatigue_level": "Fatigue Level",
+    "trend_up": "Rising",
+    "trend_down": "Falling",
+    "trend_stable": "Stable"
+  },
+
+  "map": {
+    "title": "Electoral Map",
+    "provinces": "Provinces",
+    "municipalities": "Municipalities",
+    "support_filter": "Support Filter",
+    "all_parties": "All Parties",
+    "population": "Population",
+    "seats": "Seats",
+    "expected_turnout": "Expected Turnout",
+    "party_support": "Party Support",
+    "select_region": "Select a region",
+    "no_polling_data": "No polling data available",
+    "polling_confidence": "Polling Confidence"
+  },
+
+  "media": {
+    "title": "Media Interviews",
+    "available": "Available",
+    "scheduled": "Scheduled",
+    "history": "History",
+    "schedule_interview": "Schedule Interview",
+    "prepare": "Prepare",
+    "cancel": "Cancel",
+    "outlet": "Media Outlet",
+    "audience_reach": "Audience Reach",
+    "format": "Format",
+    "topics": "Topics",
+    "impact_preview": "Impact Preview",
+    "awareness": "Awareness",
+    "credibility": "Credibility",
+    "support_change": "Support Change"
+  },
+
+  "debates": {
+    "title": "Debate Arena",
+    "upcoming_debates": "Upcoming Debates",
+    "preparation": "Preparation",
+    "talking_points": "Talking Points",
+    "opponent_analysis": "Opponent Analysis",
+    "stance_selection": "Stance Selection",
+    "progressive": "Progressive",
+    "conservative": "Conservative",
+    "moderate": "Moderate",
+    "prepare_for_debate": "Prepare for Debate"
+  },
+
+  "coalition": {
+    "title": "Coalition Builder",
+    "available_parties": "Available Parties",
+    "current_coalition": "Current Coalition",
+    "total_seats": "Total Seats",
+    "majority_required": "Majority Required",
+    "compatibility": "Compatibility",
+    "policy_alignment": "Policy Alignment",
+    "economic": "Economic",
+    "social": "Social",
+    "environmental": "Environmental",
+    "immigration": "Immigration",
+    "save_coalition": "Save Coalition",
+    "test_coalition": "Test Coalition",
+    "clear_coalition": "Clear Coalition",
+    "majority": "Majority",
+    "all_parties": "All Parties",
+    "compatible_only": "Compatible Only",
+    "large_parties": "Large Parties",
+    "small_parties": "Small Parties"
+  },
+
+  "parliament": {
+    "title": "House of Representatives",
+    "active_bills": "Active Bills",
+    "upcoming_votes": "Upcoming Votes",
+    "passed_laws": "Passed Laws",
+    "vote_for": "Vote FOR",
+    "vote_against": "Vote AGAINST",
+    "abstain": "ABSTAIN",
+    "bill_details": "Bill Details",
+    "voting_stats": "Voting Statistics",
+    "party_positions": "Party Positions",
+    "for_votes": "For",
+    "against_votes": "Against",
+    "abstentions": "Abstentions",
+    "committee": "Committee",
+    "first_reading": "First Reading",
+    "second_reading": "Second Reading",
+    "senate": "Senate"
+  },
+
+  "social": {
+    "title": "Social Media",
+    "compose_post": "Compose Post",
+    "scheduled_posts": "Scheduled Posts",
+    "analytics": "Analytics",
+    "engagement": "Engagement",
+    "reach": "Reach",
+    "sentiment": "Sentiment",
+    "post_now": "Post Now",
+    "schedule_post": "Schedule Post",
+    "hashtags": "Hashtags",
+    "mentions": "Mentions"
+  },
+
+  "results": {
+    "title": "Election Results",
+    "final_results": "Final Results",
+    "seat_distribution": "Seat Distribution",
+    "vote_share": "Vote Share",
+    "coalition_possibilities": "Coalition Possibilities",
+    "turnout": "Turnout",
+    "dhondt_calculation": "D'Hondt Calculation",
+    "electoral_threshold": "Electoral Threshold"
+  },
+
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "accessibility": "Accessibility",
+    "audio": "Audio",
+    "graphics": "Graphics",
+    "gameplay": "Gameplay",
+    "dutch": "Dutch",
+    "english": "English",
+    "text_size": "Text Size",
+    "high_contrast": "High Contrast",
+    "screen_reader": "Screen Reader",
+    "keyboard_navigation": "Keyboard Navigation",
+    "save_settings": "Save Settings",
+    "reset_defaults": "Reset to Defaults"
+  },
+
+  "parties": {
+    "vvd": "People's Party for Freedom and Democracy",
+    "pvda": "Labour Party",
+    "pvv": "Party for Freedom",
+    "cda": "Christian Democratic Appeal",
+    "d66": "Democrats 66",
+    "groenlinks": "GreenLeft",
+    "sp": "Socialist Party",
+    "cu": "ChristianUnion",
+    "sgp": "Reformed Political Party",
+    "fvd": "Forum for Democracy",
+    "pvdd": "Party for the Animals",
+    "50plus": "50PLUS",
+    "volt": "Volt Netherlands",
+    "ja21": "JA21",
+    "bij1": "BIJ1"
+  },
+
+  "tooltips": {
+    "calculation_title_polling": "Polling Calculation",
+    "calculation_title_seats": "Seat Calculation",
+    "calculation_title_coalition": "Coalition Analysis",
+    "calculation_title_dhondt": "D'Hondt Method",
+    "calculation_title_general": "Calculation",
+    "no_calculation_steps": "No calculation steps available",
+    "no_data_sources": "No data sources available",
+    "polling_explanation": "Polls are aggregated from multiple sources with weighting for reliability",
+    "dhondt_explanation": "Seats allocated using D'Hondt method with 0.67% electoral threshold",
+    "coalition_explanation": "Coalition compatibility based on policy positions and historical patterns"
+  },
+
+  "notifications": {
+    "game_saved": "Game saved",
+    "game_loaded": "Game loaded",
+    "settings_saved": "Settings saved",
+    "interview_scheduled": "Interview scheduled",
+    "bill_voted": "Vote cast on bill",
+    "coalition_formed": "Coalition formed",
+    "error_occurred": "An error occurred",
+    "data_updated": "Data updated",
+    "calculation_completed": "Calculation completed"
+  },
+
+  "actions": {
+    "save": "Save",
+    "load": "Load",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "back": "Back",
+    "next": "Next",
+    "continue": "Continue",
+    "retry": "Retry",
+    "close": "Close",
+    "edit": "Edit",
+    "delete": "Delete",
+    "add": "Add",
+    "remove": "Remove",
+    "select": "Select",
+    "deselect": "Deselect"
+  },
+
+  "time": {
+    "days_remaining": "Days Remaining",
+    "weeks_remaining": "Weeks Remaining",
+    "election_day": "Election Day",
+    "campaign_day": "Campaign Day",
+    "morning": "Morning",
+    "afternoon": "Afternoon",
+    "evening": "Evening",
+    "night": "Night",
+    "monday": "Monday",
+    "tuesday": "Tuesday",
+    "wednesday": "Wednesday",
+    "thursday": "Thursday",
+    "friday": "Friday",
+    "saturday": "Saturday",
+    "sunday": "Sunday"
+  }
+}

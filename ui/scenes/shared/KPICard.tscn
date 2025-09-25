@@ -1,0 +1,79 @@
+[gd_scene load_steps=3 format=3 uid="uid://bk8n2qr8xpqm8"]
+
+[ext_resource type="Script" path="res://ui/scenes/shared/kpi_card.gd" id="1_0k8n2"]
+[ext_resource type="Theme" path="res://ui/theme/default.tres" id="2_9k8n3"]
+
+[node name="KPICard" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_9k8n3")
+script = ExtResource("1_0k8n2")
+
+[node name="CardBackground" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CardBackground"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MetricName" type="Label" parent="CardBackground/VBoxContainer"]
+layout_mode = 2
+text = "Poll Support"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="CardBackground/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CardBackground/VBoxContainer"]
+layout_mode = 2
+
+[node name="CurrentValue" type="Label" parent="CardBackground/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "22.5%"
+horizontal_alignment = 1
+
+[node name="TrendContainer" type="VBoxContainer" parent="CardBackground/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TrendIcon" type="Label" parent="CardBackground/VBoxContainer/HBoxContainer/TrendContainer"]
+layout_mode = 2
+text = "↗"
+horizontal_alignment = 1
+
+[node name="TrendPercentage" type="Label" parent="CardBackground/VBoxContainer/HBoxContainer/TrendContainer"]
+layout_mode = 2
+text = "+2.3%"
+horizontal_alignment = 1
+
+[node name="TooltipArea" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+action_mode = 0
+
+[connection signal="mouse_entered" from="TooltipArea" to="." method="_on_tooltip_area_mouse_entered"]
+[connection signal="mouse_exited" from="TooltipArea" to="." method="_on_tooltip_area_mouse_exited"]
+[connection signal="pressed" from="TooltipArea" to="." method="_on_tooltip_area_pressed"]
